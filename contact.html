@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us & Emergency Lines - Annai Foundation</title>
+  <meta name="description" content="Get in touch with Annai Foundation. 24/7 ambulance emergency dispatch (+91 95004 15161), blood donor assistance, volunteer coordination, and Karaikal office location.">
+  
+  <link rel="icon" href="assets/images/logo-preloader.jpeg" type="image/jpeg">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/animations.css">
+  <style>
+    .faq-item-bento {
+      background: var(--bg-surface);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-md);
+      margin-bottom: 0.85rem;
+      overflow: hidden;
+      transition: all var(--transition-fast);
+    }
+    .faq-header-bento {
+      padding: 1.2rem 1.5rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      cursor: pointer;
+      font-family: var(--font-display);
+      font-weight: 700;
+      color: var(--text-heading);
+      font-size: 1rem;
+    }
+    .faq-header-bento:hover {
+      color: var(--primary);
+    }
+    .faq-body-bento {
+      padding: 0 1.5rem 1.25rem 1.5rem;
+      font-size: 0.92rem;
+      color: var(--text-body);
+      line-height: 1.7;
+      display: none;
+    }
+    .faq-item-bento.active {
+      border-color: var(--primary);
+      box-shadow: var(--shadow-subtle);
+    }
+    .faq-item-bento.active .faq-body-bento {
+      display: block;
+    }
+    .faq-item-bento.active .faq-chevron {
+      transform: rotate(180deg);
+      color: var(--primary);
+    }
+    .faq-chevron {
+      transition: transform var(--transition-fast);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Floating Island Navigation Bar -->
+  <div class="island-nav-wrapper">
+    <nav class="island-navbar" id="mainIslandNav">
+      <a href="index.html" class="brand-island">
+        <img src="assets/images/annai-logo.jpeg" alt="Annai Foundation - Karaikal">
+      </a>
+
+      <ul class="nav-links-island">
+        <li><a href="index.html" class="nav-link-item">Home</a></li>
+        <li><a href="programs.html" class="nav-link-item">Causes & Programs</a></li>
+        <li><a href="impact.html" class="nav-link-item">Impact & Stories</a></li>
+        <li><a href="events.html" class="nav-link-item">Camps & Events</a></li>
+        <li><a href="volunteer.html" class="nav-link-item">Volunteer</a></li>
+        <li><a href="contact.html" class="nav-link-item active">Contact & SOS</a></li>
+      </ul>
+
+      <div class="nav-actions-island">
+        <a href="javascript:void(0)" class="sos-pill-btn" data-action="demo-call">
+          <i class="bi bi-telephone-fill"></i> <span>SOS: 95004 15161</span>
+        </a>
+        <a href="donate.html" class="btn-island-donate">
+          <i class="bi bi-heart-fill"></i> Give Hope
+        </a>
+        <button class="mobile-nav-toggle" id="mobileNavToggle" aria-label="Open Navigation">
+          <i class="bi bi-list"></i>
+        </button>
+      </div>
+    </nav>
+  </div>
+
+  <!-- Mobile Drawer Menu -->
+  <div class="mobile-drawer-backdrop" id="drawerBackdrop"></div>
+  <aside class="mobile-drawer-panel" id="drawerPanel">
+    <div class="drawer-top">
+      <div class="flex items-center gap-2">
+        <img src="assets/images/logo-preloader.jpeg" alt="Annai Foundation" style="width: 38px; height: 38px; border-radius: 8px; object-fit: contain;">
+        <div>
+          <strong style="font-family: var(--font-heading); font-size: 1.15rem; display: block; color: var(--text-heading);">Annai Foundation</strong>
+          <span style="font-size: 0.72rem; color: var(--text-muted);">Karaikal • Reg.no.12612/23</span>
+        </div>
+      </div>
+      <button class="drawer-close-btn" id="drawerCloseBtn" aria-label="Close menu">&times;</button>
+    </div>
+
+    <ul class="drawer-links-list">
+      <li><a href="index.html" class="drawer-link"><i class="bi bi-house-door"></i> Home</a></li>
+      <li><a href="programs.html" class="drawer-link"><i class="bi bi-grid-fill"></i> Causes & Programs</a></li>
+      <li><a href="impact.html" class="drawer-link"><i class="bi bi-graph-up-arrow"></i> Impact & Stories</a></li>
+      <li><a href="events.html" class="drawer-link"><i class="bi bi-calendar-event"></i> Camps & Events</a></li>
+      <li><a href="volunteer.html" class="drawer-link"><i class="bi bi-people-fill"></i> Volunteer With Us</a></li>
+      <li><a href="donate.html" class="drawer-link"><i class="bi bi-gift-fill"></i> Donate / 80G Tax Exemption</a></li>
+      <li><a href="contact.html" class="drawer-link active"><i class="bi bi-telephone-fill"></i> Contact & Emergency SOS</a></li>
+    </ul>
+  </aside>
+
+  <!-- Editorial Page Header -->
+  <section class="section-sm" style="padding-top: 4.5rem; background: var(--bg-subtle); border-bottom: 1px solid var(--border-subtle);">
+    <div class="container text-center" style="max-width: 760px;">
+      <span class="badge-pill badge-terracotta"><i class="bi bi-telephone-inbound-fill"></i> 24/7 Helpline</span>
+      <h1 style="font-size: clamp(2.2rem, 3.8vw, 3.2rem); margin-bottom: 0.85rem;">Emergency & Contact Hub</h1>
+      <p class="section-subtitle">
+        Whether you require immediate ambulance dispatch, urgent blood donor matching, or wish to collaborate on CSR projects, we are standing by.
+      </p>
+    </div>
+  </section>
+
+  <!-- Emergency Dispatch Cards Strip -->
+  <section class="section-sm" style="padding-bottom: 1.5rem;">
+    <div class="container">
+      <div class="grid grid-3">
+        <!-- Card 1: Ambulance SOS -->
+        <div class="bento-card reveal" style="border-top: 4px solid var(--accent-red); text-align: center;">
+          <div style="width: 52px; height: 52px; border-radius: 50%; background: #FEE2E2; color: #DC2626; display: flex; align-items: center; justify-content: center; font-size: 1.6rem; margin: 0 auto 1rem auto;">
+            <i class="bi bi-telephone-outbound-fill"></i>
+          </div>
+          <h3 style="font-size: 1.3rem; margin-bottom: 0.25rem;">24/7 Ambulance SOS</h3>
+          <p style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 1rem;">Immediate road accident & hospital transfer</p>
+          <a href="javascript:void(0)" class="btn btn-secondary btn-sm" data-action="demo-call" style="width: 100%; background: var(--accent-red); border: none;">
+            <i class="bi bi-telephone-fill"></i> +91 95004 15161
+          </a>
+        </div>
+
+        <!-- Card 2: Blood Helpline -->
+        <div class="bento-card reveal reveal-delay-1" style="border-top: 4px solid var(--primary); text-align: center;">
+          <div style="width: 52px; height: 52px; border-radius: 50%; background: var(--primary-light); color: var(--primary); display: flex; align-items: center; justify-content: center; font-size: 1.6rem; margin: 0 auto 1rem auto;">
+            <i class="bi bi-droplet-half"></i>
+          </div>
+          <h3 style="font-size: 1.3rem; margin-bottom: 0.25rem;">Blood Helpline</h3>
+          <p style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 1rem;">Urgent donor matching across Karaikal</p>
+          <a href="javascript:void(0)" class="btn btn-primary btn-sm" data-action="demo-whatsapp" style="width: 100%;">
+            <i class="bi bi-whatsapp"></i> Chat with Blood Desk
+          </a>
+        </div>
+
+        <!-- Card 3: Karaikal Office -->
+        <div class="bento-card reveal reveal-delay-2" style="border-top: 4px solid var(--secondary); text-align: center;">
+          <div style="width: 52px; height: 52px; border-radius: 50%; background: var(--secondary-light); color: var(--secondary); display: flex; align-items: center; justify-content: center; font-size: 1.6rem; margin: 0 auto 1rem auto;">
+            <i class="bi bi-geo-alt-fill"></i>
+          </div>
+          <h3 style="font-size: 1.3rem; margin-bottom: 0.25rem;">Karaikal Office</h3>
+          <p style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 1rem;">Service Road, Karaikal, Puducherry 609602</p>
+          <a href="mailto:contact@annaifoundation.com" class="btn btn-outline btn-sm" style="width: 100%;">
+            <i class="bi bi-envelope-fill"></i> Email Official Desk
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Form & Interactive Map Grid -->
+  <section class="section">
+    <div class="container">
+      <div class="grid grid-2" style="gap: 3.5rem; align-items: start;">
+        
+        <!-- Contact Form -->
+        <div class="bento-card reveal">
+          <h2 style="font-size: 1.6rem; margin-bottom: 0.4rem;">Send a Direct Message</h2>
+          <p style="font-size: 0.88rem; color: var(--text-muted); margin-bottom: 1.5rem;">
+            Fill out this form and our administrative team will respond within 24 hours.
+          </p>
+
+          <form id="contactForm">
+            <div class="grid grid-2" style="gap: 1rem;">
+              <div class="form-group">
+                <label class="form-label" for="contactName">Your Name *</label>
+                <input type="text" id="contactName" class="form-control" placeholder="e.g. Vignesh" required>
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="contactPhone">Mobile Number *</label>
+                <input type="tel" id="contactPhone" class="form-control" placeholder="e.g. 9500415161" required>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="contactEmail">Email Address</label>
+              <input type="email" id="contactEmail" class="form-control" placeholder="name@example.com">
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="contactInquiryType">Inquiry Purpose *</label>
+              <select id="contactInquiryType" class="form-control">
+                <option value="General Inquiry">General Inquiry</option>
+                <option value="Ambulance Services">Ambulance Emergency & Transport</option>
+                <option value="Blood Donation">Blood / Platelet Assistance</option>
+                <option value="Host a Camp">Host a Camp on College Campus</option>
+                <option value="CSR Collaboration">CSR & Corporate Partnership</option>
+                <option value="Volunteer Coordination">Volunteer Coordination</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="contactMsg">Your Message *</label>
+              <textarea id="contactMsg" class="form-control" placeholder="Write your message here..." required></textarea>
+            </div>
+
+            <button type="submit" id="btnContactSubmit" class="btn btn-primary btn-lg" style="width: 100%;">
+              <i class="bi bi-send-fill"></i> Send Message
+            </button>
+          </form>
+        </div>
+
+        <!-- Right: Map & FAQ Section -->
+        <div>
+          <!-- Location Map Frame -->
+          <div class="bento-card reveal reveal-delay-1" style="padding: 0; overflow: hidden; margin-bottom: 2rem;">
+            <div style="padding: 1.5rem 1.75rem; border-bottom: 1px solid var(--border-subtle);">
+              <h4 style="margin-bottom: 0.15rem; font-size: 1.15rem;">Our Karaikal Headquarters</h4>
+              <span style="font-size: 0.8rem; color: var(--text-muted);">No. 123, Service Road, Karaikal, Puducherry 609602</span>
+            </div>
+            <div style="height: 220px; width: 100%; background: #E5E7EB; position: relative;">
+              <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d62637.36940828784!2d79.80556272372481!3d10.92543787754123!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a5511394f479ea5%3A0x8e0258a43ea416d5!2sKaraikal%2C%20Puducherry!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin" 
+                width="100%" 
+                height="100%" 
+                style="border:0;" 
+                allowfullscreen="" 
+                loading="lazy" 
+                referrerpolicy="no-referrer-when-downgrade"
+                title="Annai Foundation Location Map">
+              </iframe>
+            </div>
+          </div>
+
+          <!-- FAQ Accordion -->
+          <div class="reveal reveal-delay-2">
+            <h3 style="font-size: 1.3rem; margin-bottom: 1rem;">Frequently Asked Questions</h3>
+            
+            <div class="faq-item-bento active">
+              <div class="faq-header-bento">
+                <span>Are donations eligible for 80G tax exemption?</span>
+                <i class="bi bi-chevron-down faq-chevron"></i>
+              </div>
+              <div class="faq-body-bento">
+                Yes! All contributions to Annai Foundation qualify for 50% income tax deduction under Section 80G of the Indian Income Tax Act 1961. You can download your official tax receipt instantly.
+              </div>
+            </div>
+
+            <div class="faq-item-bento">
+              <div class="faq-header-bento">
+                <span>How fast does the 24/7 ambulance respond?</span>
+                <i class="bi bi-chevron-down faq-chevron"></i>
+              </div>
+              <div class="faq-body-bento">
+                Our ambulance operates round-the-clock across Karaikal with an average arrival time of 8.5 minutes within municipal limits, equipped with oxygen and first-aid.
+              </div>
+            </div>
+
+            <div class="faq-item-bento">
+              <div class="faq-header-bento">
+                <span>How can my college organize a Google AI / Blood Camp?</span>
+                <i class="bi bi-chevron-down faq-chevron"></i>
+              </div>
+              <div class="faq-body-bento">
+                You can select "Host a Camp" on the contact form. Our coordinator team will reach out with complete equipment, instructors, and certificates.
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Editorial Sanctuary Footer -->
+  <footer class="editorial-footer">
+    <div class="container">
+      <div class="footer-top-grid">
+        <!-- Col 1: Brand Manifesto -->
+        <div>
+          <div class="footer-logo-card">
+            <img src="assets/images/annai-logo.jpeg" alt="Annai Foundation">
+          </div>
+          <p style="font-size: 0.92rem; line-height: 1.7; color: #C7BCB7; margin-bottom: 1.5rem;">
+            A registered non-profit trust dedicated to 24/7 emergency medical rescue, blood donor lifelines, destitute dignity, and youth tech empowerment across coastal Karaikal and Puducherry.
+          </p>
+          <div class="flex gap-2">
+            <span class="tax-badge" style="background: rgba(255,255,255,0.1); color: #FDE68A; padding: 0.35rem 0.75rem; font-size: 0.78rem; border-radius: var(--radius-xs);">
+              <i class="bi bi-patch-check-fill"></i> Section 80G Verified
+            </span>
+            <span class="tax-badge" style="background: rgba(255,255,255,0.1); color: #B7DFCA; padding: 0.35rem 0.75rem; font-size: 0.78rem; border-radius: var(--radius-xs);">
+              <i class="bi bi-shield-check"></i> Reg. No. 12612/23
+            </span>
+          </div>
+        </div>
+
+        <!-- Col 2: Quick Links -->
+        <div>
+          <h4 class="footer-heading">Navigation</h4>
+          <ul class="footer-nav-list">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="programs.html">Causes & Programs</a></li>
+            <li><a href="impact.html">Impact & Stories</a></li>
+            <li><a href="events.html">Camps & Events</a></li>
+            <li><a href="volunteer.html">Volunteer Sign Up</a></li>
+            <li><a href="donate.html">Donate / 80G Tax Exemption</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 3: Core Programs -->
+        <div>
+          <h4 class="footer-heading">Key Initiatives</h4>
+          <ul class="footer-nav-list">
+            <li><a href="programs.html?cat=Healthcare">24/7 Free Ambulance</a></li>
+            <li><a href="programs.html?cat=Healthcare">Emergency Blood Bank</a></li>
+            <li><a href="programs.html?cat=Humanitarian">Destitute Sacred Rites</a></li>
+            <li><a href="programs.html?cat=Education">Grow with Google Labs</a></li>
+            <li><a href="programs.html?cat=Livelihood">Women Tailoring Units</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 4: Emergency Contacts -->
+        <div>
+          <h4 class="footer-heading">Emergency Hotline</h4>
+          <p style="font-size: 0.9rem; color: #C7BCB7; margin-bottom: 0.6rem;">
+            <i class="bi bi-geo-alt-fill" style="color: var(--primary);"></i> Karaikal, Puducherry 609602, India
+          </p>
+          <p style="font-size: 0.9rem; color: #C7BCB7; margin-bottom: 0.6rem;">
+            <i class="bi bi-telephone-fill" style="color: var(--accent-gold);"></i> <strong>24/7 Ambulance :</strong> 95004 15161
+          </p>
+          <p style="font-size: 0.9rem; color: #C7BCB7; margin-bottom: 1.25rem;">
+            <i class="bi bi-envelope-fill" style="color: #10B981;"></i> contact@annaifoundation.com
+          </p>
+          <a href="javascript:void(0)" class="btn btn-outline-white btn-sm" data-action="demo-whatsapp" style="width: 100%;">
+            <i class="bi bi-whatsapp"></i> WhatsApp Helpline
+          </a>
+        </div>
+      </div>
+
+      <div class="footer-bottom-bar">
+        <div>&copy; 2026 Annai Foundation. Registered NGO under Indian Trusts Act. All rights reserved.</div>
+        <div class="flex gap-3">
+          <a href="contact.html" style="color: #9E918C;">Privacy Policy</a>
+          <a href="contact.html" style="color: #9E918C;">Terms of Service</a>
+          <a href="donate.html" style="color: #9E918C;">80G Exemption</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating Quick Action Dock -->
+  <aside class="floating-dock-pill" aria-label="Quick Actions">
+    <a href="donate.html" class="dock-pill-btn dock-pill-donate"><i class="bi bi-heart-fill"></i> <span>Give</span></a>
+    <a href="javascript:void(0)" class="dock-pill-btn dock-pill-emergency" data-action="demo-call"><i class="bi bi-telephone-outbound-fill"></i> <span>24/7 SOS</span></a>
+    <a href="javascript:void(0)" class="dock-pill-btn dock-pill-whatsapp" data-action="demo-whatsapp"><i class="bi bi-whatsapp"></i> <span>WhatsApp</span></a>
+  </aside>
+
+  <!-- JavaScript Modules -->
+  <script src="assets/js/data.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script>
+    // FAQ Accordion Interaction
+    document.querySelectorAll('.faq-header-bento').forEach(header => {
+      header.addEventListener('click', () => {
+        const item = header.parentElement;
+        const wasActive = item.classList.contains('active');
+        document.querySelectorAll('.faq-item-bento').forEach(i => i.classList.remove('active'));
+        if (!wasActive) item.classList.add('active');
+      });
+    });
+
+    // Contact Form Submission
+    const contactForm = document.getElementById('contactForm');
+    const btnSubmit = document.getElementById('btnContactSubmit');
+
+    if (contactForm) {
+      contactForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+        const name = document.getElementById('contactName')?.value.trim();
+        const inq = document.getElementById('contactInquiryType')?.value;
+
+        if (btnSubmit) {
+          btnSubmit.disabled = true;
+          btnSubmit.innerHTML = '<span class="spinner-border spinner-border-sm"></span> Sending Message...';
+        }
+
+        setTimeout(() => {
+          if (btnSubmit) {
+            btnSubmit.disabled = false;
+            btnSubmit.innerHTML = '<i class="bi bi-send-fill"></i> Send Message';
+          }
+          showToast(`Thank you, ${name}! Your inquiry regarding "${inq}" has been received. Our team will contact you shortly.`, 'success');
+          contactForm.reset();
+        }, 1000);
+      });
+    }
+  </script>
+</body>
+</html>

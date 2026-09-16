@@ -1,0 +1,96 @@
+/* ==========================================================================
+   Annai Foundation - Animation & Micro-Interactions Engine
+   ========================================================================== */
+
+/* --- Gentle Pulse & Heartbeat --- */
+@keyframes heartPulse {
+  0% { transform: scale(1); }
+  14% { transform: scale(1.18); }
+  28% { transform: scale(1); }
+  42% { transform: scale(1.18); }
+  70% { transform: scale(1); }
+}
+
+.animate-pulse-heart {
+  display: inline-block;
+  animation: heartPulse 2s infinite ease-in-out;
+  color: var(--primary);
+}
+
+/* --- Floating Organic Pill --- */
+@keyframes floatBadge {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-8px); }
+}
+
+.animate-float {
+  animation: floatBadge 4s ease-in-out infinite;
+}
+.animate-float-delay {
+  animation: floatBadge 4s ease-in-out 2s infinite;
+}
+
+/* --- Glowing Ambient Aura --- */
+@keyframes auraGlow {
+  0%, 100% { opacity: 0.4; transform: scale(1); }
+  50% { opacity: 0.75; transform: scale(1.08); }
+}
+
+.animate-glow {
+  animation: auraGlow 5s ease-in-out infinite;
+}
+
+/* --- Live Ticker Marquee --- */
+.ticker-marquee-track {
+  display: flex;
+  overflow: hidden;
+  user-select: none;
+  gap: 2.5rem;
+  padding: 0.75rem 0;
+  background: var(--bg-subtle);
+  border-top: 1px solid var(--border-subtle);
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.ticker-marquee-content {
+  flex-shrink: 0;
+  display: flex;
+  justify-content: space-around;
+  min-width: 100%;
+  gap: 2.5rem;
+  animation: scrollMarquee 38s linear infinite;
+  font-family: var(--font-body);
+  font-size: 0.96rem;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  color: var(--text-heading);
+}
+
+.ticker-marquee-content span {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  white-space: nowrap;
+  font-weight: 600;
+}
+
+@keyframes scrollMarquee {
+  from { transform: translateX(0); }
+  to { transform: translateX(-100%); }
+}
+
+/* --- Fade In & Slide Up Reveal --- */
+.reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1), transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.reveal-delay-1 { transition-delay: 0.15s; }
+.reveal-delay-2 { transition-delay: 0.3s; }
+.reveal-delay-3 { transition-delay: 0.45s; }

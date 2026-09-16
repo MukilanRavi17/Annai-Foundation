@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Volunteer With Us - Annai Foundation</title>
+  <meta name="description" content="Join Annai Foundation as a volunteer in emergency medical response, blood donation drives, Google digital skills workshops, or food relief in Karaikal.">
+  
+  <link rel="icon" href="assets/images/logo-preloader.jpeg" type="image/jpeg">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/animations.css">
+  <style>
+    .wizard-step-item {
+      flex: 1;
+      text-align: center;
+      position: relative;
+    }
+    .wizard-step-num {
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      background: var(--bg-subtle);
+      color: var(--text-muted);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 0.4rem auto;
+      font-family: var(--font-display);
+      font-weight: 700;
+      font-size: 0.9rem;
+      border: 1.5px solid var(--border-subtle);
+    }
+    .wizard-step-item.active .wizard-step-num {
+      background: var(--primary);
+      color: #FFFFFF;
+      border-color: var(--primary);
+      box-shadow: 0 4px 12px var(--primary-glow);
+    }
+    .wizard-step-title {
+      font-family: var(--font-display);
+      font-size: 0.82rem;
+      font-weight: 700;
+      color: var(--text-muted);
+    }
+    .wizard-step-item.active .wizard-step-title {
+      color: var(--text-heading);
+    }
+    .role-selection-card {
+      border: 1.5px solid var(--border-subtle);
+      border-radius: var(--radius-sm);
+      padding: 1rem;
+      background: var(--bg-canvas);
+      cursor: pointer;
+      transition: all var(--transition-fast);
+    }
+    .role-selection-card:hover,
+    .role-selection-card:has(input:checked) {
+      border-color: var(--primary);
+      background: var(--primary-light);
+    }
+    .volunteer-id-pass {
+      background: linear-gradient(135deg, var(--secondary) 0%, #15382A 100%);
+      color: #FFFFFF;
+      border-radius: var(--radius-xl);
+      padding: 2.25rem;
+      border: 2px solid var(--accent-gold);
+      position: relative;
+      overflow: hidden;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Floating Island Navigation Bar -->
+  <div class="island-nav-wrapper">
+    <nav class="island-navbar" id="mainIslandNav">
+      <a href="index.html" class="brand-island">
+        <img src="assets/images/annai-logo.jpeg" alt="Annai Foundation - Karaikal">
+      </a>
+
+      <ul class="nav-links-island">
+        <li><a href="index.html" class="nav-link-item">Home</a></li>
+        <li><a href="programs.html" class="nav-link-item">Causes & Programs</a></li>
+        <li><a href="impact.html" class="nav-link-item">Impact & Stories</a></li>
+        <li><a href="events.html" class="nav-link-item">Camps & Events</a></li>
+        <li><a href="volunteer.html" class="nav-link-item active">Volunteer</a></li>
+        <li><a href="contact.html" class="nav-link-item">Contact & SOS</a></li>
+      </ul>
+
+      <div class="nav-actions-island">
+        <a href="javascript:void(0)" class="sos-pill-btn" data-action="demo-call">
+          <i class="bi bi-telephone-fill"></i> <span>SOS: 95004 15161</span>
+        </a>
+        <a href="donate.html" class="btn-island-donate">
+          <i class="bi bi-heart-fill"></i> Give Hope
+        </a>
+        <button class="mobile-nav-toggle" id="mobileNavToggle" aria-label="Open Navigation">
+          <i class="bi bi-list"></i>
+        </button>
+      </div>
+    </nav>
+  </div>
+
+  <!-- Mobile Drawer Menu -->
+  <div class="mobile-drawer-backdrop" id="drawerBackdrop"></div>
+  <aside class="mobile-drawer-panel" id="drawerPanel">
+    <div class="drawer-top">
+      <div class="flex items-center gap-2">
+        <img src="assets/images/logo-preloader.jpeg" alt="Annai Foundation" style="width: 38px; height: 38px; border-radius: 8px; object-fit: contain;">
+        <div>
+          <strong style="font-family: var(--font-heading); font-size: 1.15rem; display: block; color: var(--text-heading);">Annai Foundation</strong>
+          <span style="font-size: 0.72rem; color: var(--text-muted);">Karaikal • Reg.no.12612/23</span>
+        </div>
+      </div>
+      <button class="drawer-close-btn" id="drawerCloseBtn" aria-label="Close menu">&times;</button>
+    </div>
+
+    <ul class="drawer-links-list">
+      <li><a href="index.html" class="drawer-link"><i class="bi bi-house-door"></i> Home</a></li>
+      <li><a href="programs.html" class="drawer-link"><i class="bi bi-grid-fill"></i> Causes & Programs</a></li>
+      <li><a href="impact.html" class="drawer-link"><i class="bi bi-graph-up-arrow"></i> Impact & Stories</a></li>
+      <li><a href="events.html" class="drawer-link"><i class="bi bi-calendar-event"></i> Camps & Events</a></li>
+      <li><a href="volunteer.html" class="drawer-link active"><i class="bi bi-people-fill"></i> Volunteer With Us</a></li>
+      <li><a href="donate.html" class="drawer-link"><i class="bi bi-gift-fill"></i> Donate / 80G Tax Exemption</a></li>
+      <li><a href="contact.html" class="drawer-link"><i class="bi bi-telephone-fill"></i> Contact & Emergency SOS</a></li>
+    </ul>
+  </aside>
+
+  <!-- Editorial Page Header -->
+  <section class="section-sm" style="padding-top: 4.5rem; background: var(--bg-subtle); border-bottom: 1px solid var(--border-subtle);">
+    <div class="container text-center" style="max-width: 760px;">
+      <span class="badge-pill badge-evergreen"><i class="bi bi-people-fill"></i> Join the Movement</span>
+      <h1 style="font-size: clamp(2.2rem, 3.8vw, 3.2rem); margin-bottom: 0.85rem;">Be the Hands That Save Lives</h1>
+      <p class="section-subtitle">
+        Whether you are a student, teacher, doctor, or corporate professional, your empathy can restore hope across coastal Karaikal.
+      </p>
+    </div>
+  </section>
+
+  <!-- Volunteer Roles Bento Grid -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="badge-pill badge-terracotta">Opportunities</span>
+        <h2 class="section-title">Where Your Skills Can Create Impact</h2>
+        <p class="section-subtitle">Choose the avenue where your heart and time can make the greatest difference.</p>
+      </div>
+
+      <div class="grid grid-3">
+        <!-- Role 1 -->
+        <div class="bento-card reveal">
+          <div style="width: 48px; height: 48px; border-radius: 50%; background: #FEE2E2; color: #DC2626; display: flex; align-items: center; justify-content: center; font-size: 1.4rem; margin-bottom: 1.25rem;">
+            <i class="bi bi-ambulance"></i>
+          </div>
+          <h3 style="font-size: 1.25rem; margin-bottom: 0.5rem;">Emergency First Responder</h3>
+          <p style="font-size: 0.88rem; color: var(--text-body); margin-bottom: 1rem;">
+            Support paramedic drivers in road accident triage, emergency patient transfers, and first-aid response.
+          </p>
+          <span style="font-family: var(--font-display); font-size: 0.78rem; font-weight: 700; color: var(--secondary);"><i class="bi bi-clock"></i> Weekend / On-Call Shifts</span>
+        </div>
+
+        <!-- Role 2 -->
+        <div class="bento-card reveal reveal-delay-1">
+          <div style="width: 48px; height: 48px; border-radius: 50%; background: var(--primary-light); color: var(--primary); display: flex; align-items: center; justify-content: center; font-size: 1.4rem; margin-bottom: 1.25rem;">
+            <i class="bi bi-droplet-half"></i>
+          </div>
+          <h3 style="font-size: 1.25rem; margin-bottom: 0.5rem;">Blood Camp Coordinator</h3>
+          <p style="font-size: 0.88rem; color: var(--text-body); margin-bottom: 1rem;">
+            Organize voluntary blood drives in local colleges, coordinate urgent donor matching calls, and manage donor registries.
+          </p>
+          <span style="font-family: var(--font-display); font-size: 0.78rem; font-weight: 700; color: var(--secondary);"><i class="bi bi-clock"></i> 4-6 Hours / Week</span>
+        </div>
+
+        <!-- Role 3 -->
+        <div class="bento-card reveal reveal-delay-2">
+          <div style="width: 48px; height: 48px; border-radius: 50%; background: var(--accent-gold-light); color: #B45309; display: flex; align-items: center; justify-content: center; font-size: 1.4rem; margin-bottom: 1.25rem;">
+            <i class="bi bi-laptop"></i>
+          </div>
+          <h3 style="font-size: 1.25rem; margin-bottom: 0.5rem;">Google Tech Mentor</h3>
+          <p style="font-size: 0.88rem; color: var(--text-body); margin-bottom: 1rem;">
+            Coach rural college students in Google Workspace tools, resume crafting, spreadsheets, and workplace soft skills.
+          </p>
+          <span style="font-family: var(--font-display); font-size: 0.78rem; font-weight: 700; color: var(--secondary);"><i class="bi bi-clock"></i> Saturdays / Sundays</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4-Stage Volunteer Onboarding Wizard -->
+  <section class="section section-bg-sand" id="volunteerWizardSection">
+    <div class="container" style="max-width: 800px;">
+      <div class="section-header reveal" style="margin-bottom: 2rem;">
+        <span class="badge-pill badge-evergreen">Registration</span>
+        <h2 class="section-title">Volunteer Application Wizard</h2>
+        <p class="section-subtitle">Complete this simple 4-step registration to join our volunteer family and receive your official pass.</p>
+      </div>
+
+      <div class="bento-card" style="padding: 2.5rem;">
+        <!-- Wizard Steps Bar -->
+        <div class="flex-between" style="margin-bottom: 2.5rem; border-bottom: 1px solid var(--border-subtle); padding-bottom: 1.25rem;">
+          <div class="wizard-step-item active" id="stepIndicator1">
+            <div class="wizard-step-num">1</div>
+            <span class="wizard-step-title">Profile</span>
+          </div>
+          <div class="wizard-step-item" id="stepIndicator2">
+            <div class="wizard-step-num">2</div>
+            <span class="wizard-step-title">Role</span>
+          </div>
+          <div class="wizard-step-item" id="stepIndicator3">
+            <div class="wizard-step-num">3</div>
+            <span class="wizard-step-title">Availability</span>
+          </div>
+          <div class="wizard-step-item" id="stepIndicator4">
+            <div class="wizard-step-num">4</div>
+            <span class="wizard-step-title">Declaration</span>
+          </div>
+        </div>
+
+        <form id="volunteerWizardForm">
+          <!-- Step 1: Profile -->
+          <div class="wizard-step-panel" id="stepPanel1">
+            <h3 style="font-size: 1.3rem; margin-bottom: 1.25rem;">Step 1: Personal & Contact Information</h3>
+            <div class="grid grid-2" style="gap: 1rem;">
+              <div class="form-group">
+                <label class="form-label" for="volName">Full Name *</label>
+                <input type="text" id="volName" class="form-control" placeholder="e.g. Vigneshwaran R" required>
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="volPhone">WhatsApp Mobile *</label>
+                <input type="tel" id="volPhone" class="form-control" placeholder="e.g. 9500415161" required>
+              </div>
+            </div>
+
+            <div class="grid grid-2" style="gap: 1rem;">
+              <div class="form-group">
+                <label class="form-label" for="volEmail">Email Address *</label>
+                <input type="email" id="volEmail" class="form-control" placeholder="vignesh@example.com" required>
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="volCity">Town / City *</label>
+                <input type="text" id="volCity" class="form-control" placeholder="e.g. Karaikal / Nagapattinam" required>
+              </div>
+            </div>
+
+            <div class="grid grid-2" style="gap: 1rem;">
+              <div class="form-group">
+                <label class="form-label" for="volBloodGroup">Blood Group</label>
+                <select id="volBloodGroup" class="form-control">
+                  <option value="O+">O Positive (O+)</option>
+                  <option value="O-">O Negative (O-)</option>
+                  <option value="A+">A Positive (A+)</option>
+                  <option value="A-">A Negative (A-)</option>
+                  <option value="B+">B Positive (B+)</option>
+                  <option value="B-">B Negative (B-)</option>
+                  <option value="AB+">AB Positive (AB+)</option>
+                  <option value="AB-">AB Negative (AB-)</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="volOccupation">Occupation / College</label>
+                <input type="text" id="volOccupation" class="form-control" placeholder="e.g. Student / Software / Healthcare">
+              </div>
+            </div>
+          </div>
+
+          <!-- Step 2: Role Selection -->
+          <div class="wizard-step-panel" id="stepPanel2" style="display: none;">
+            <h3 style="font-size: 1.3rem; margin-bottom: 1.25rem;">Step 2: Select Preferred Role(s)</h3>
+            <div class="grid grid-2" style="gap: 0.85rem; margin-bottom: 1.5rem;">
+              <label class="role-selection-card flex items-center gap-2">
+                <input type="checkbox" name="volRole" value="Emergency Ambulance Response">
+                <div>
+                  <strong>24/7 Ambulance & First Aid</strong>
+                  <div style="font-size: 0.78rem; color: var(--text-muted);">Accident triage & paramedic support</div>
+                </div>
+              </label>
+
+              <label class="role-selection-card flex items-center gap-2">
+                <input type="checkbox" name="volRole" value="Blood Donation Coordination">
+                <div>
+                  <strong>Blood Donation Camps</strong>
+                  <div style="font-size: 0.78rem; color: var(--text-muted);">Donor recruitment & hospital liaison</div>
+                </div>
+              </label>
+
+              <label class="role-selection-card flex items-center gap-2">
+                <input type="checkbox" name="volRole" value="Google Skills & Youth Mentor">
+                <div>
+                  <strong>Google Skills Mentorship</strong>
+                  <div style="font-size: 0.78rem; color: var(--text-muted);">Teaching digital fluency & coaching</div>
+                </div>
+              </label>
+
+              <label class="role-selection-card flex items-center gap-2">
+                <input type="checkbox" name="volRole" value="Destitute Care & Meals">
+                <div>
+                  <strong>Destitute Care & Hot Meals</strong>
+                  <div style="font-size: 0.78rem; color: var(--text-muted);">Meal distribution & sacred rites support</div>
+                </div>
+              </label>
+            </div>
+          </div>
+
+          <!-- Step 3: Availability -->
+          <div class="wizard-step-panel" id="stepPanel3" style="display: none;">
+            <h3 style="font-size: 1.3rem; margin-bottom: 1.25rem;">Step 3: Availability & Shifts</h3>
+            <div class="grid grid-3" style="gap: 0.75rem; margin-bottom: 1.5rem;">
+              <label class="role-selection-card">
+                <input type="checkbox" name="volAvailability" value="Weekends (Sat/Sun)">
+                <strong>Weekends Only</strong>
+              </label>
+              <label class="role-selection-card">
+                <input type="checkbox" name="volAvailability" value="Weekdays">
+                <strong>Weekdays (Flexible)</strong>
+              </label>
+              <label class="role-selection-card">
+                <input type="checkbox" name="volAvailability" value="Emergency On-Call">
+                <strong>Emergency On-Call</strong>
+              </label>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label">Do you possess personal transport for local coordination?</label>
+              <select id="volTransport" class="form-control">
+                <option value="Yes, Two-Wheeler">Yes, Two-Wheeler (Bike / Scooter)</option>
+                <option value="Yes, Car">Yes, Four-Wheeler (Car)</option>
+                <option value="No">No (Public Transport)</option>
+              </select>
+            </div>
+          </div>
+
+          <!-- Step 4: Declaration -->
+          <div class="wizard-step-panel" id="stepPanel4" style="display: none;">
+            <h3 style="font-size: 1.3rem; margin-bottom: 1.25rem;">Step 4: Volunteer Code of Conduct</h3>
+            <div class="form-group">
+              <label class="form-label" for="volMotivation">Why do you wish to volunteer with Annai Foundation?</label>
+              <textarea id="volMotivation" class="form-control" placeholder="Share what inspires you to serve..."></textarea>
+            </div>
+
+            <div style="background: var(--bg-subtle); padding: 1rem; border-radius: var(--radius-sm); margin-bottom: 1.25rem; font-size: 0.85rem; color: var(--text-body);">
+              <label class="flex items-center gap-2">
+                <input type="checkbox" id="volAgreeTerms" required>
+                <span>
+                  I commit to serving with compassion, respecting beneficiary confidentiality, and upholding the dignity of every person assisted.
+                </span>
+              </label>
+            </div>
+          </div>
+
+          <!-- Wizard Nav Buttons -->
+          <div class="flex-between items-center" style="margin-top: 2rem; border-top: 1px solid var(--border-subtle); padding-top: 1.25rem;">
+            <button type="button" id="btnWizardPrev" class="btn btn-outline btn-sm" style="display: none;">
+              <i class="bi bi-arrow-left"></i> Previous
+            </button>
+            <button type="button" id="btnWizardNext" class="btn btn-primary" style="margin-left: auto;">
+              Next Step <i class="bi bi-arrow-right"></i>
+            </button>
+            <button type="submit" id="btnWizardSubmit" class="btn btn-primary btn-lg" style="display: none; margin-left: auto;">
+              <i class="bi bi-check2-circle"></i> Generate Volunteer Pass
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Official Verified Volunteer Pass Modal -->
+  <div class="modal-backdrop-custom" id="volunteerBadgeModal">
+    <div class="modal-window" style="max-width: 540px;">
+      <button class="modal-close-x" onclick="document.getElementById('volunteerBadgeModal').classList.remove('open'); document.body.style.overflow='';">&times;</button>
+      
+      <div class="volunteer-id-pass">
+        <div class="flex-between items-center" style="border-bottom: 1px solid rgba(255,255,255,0.2); padding-bottom: 0.85rem; margin-bottom: 1.25rem;">
+          <div class="flex items-center gap-2">
+            <div style="width: 40px; height: 40px; background: #FFFFFF; border-radius: 8px; padding: 2px;">
+              <img src="assets/images/logo-preloader.jpeg" alt="Annai Foundation" style="width: 100%; height: 100%; object-fit: contain;">
+            </div>
+            <div>
+              <strong style="color: #FFFFFF; font-size: 1.1rem; display: block; font-family: var(--font-heading);">Annai Foundation</strong>
+              <span style="font-size: 0.7rem; color: var(--accent-gold); text-transform: uppercase;">OFFICIAL VOLUNTEER PASS</span>
+            </div>
+          </div>
+          <span id="badgeVolId" style="font-family: monospace; font-weight: 800; color: var(--accent-gold); font-size: 0.95rem;">AF-VOL-4819</span>
+        </div>
+
+        <div style="margin-bottom: 1.5rem;">
+          <span style="font-size: 0.72rem; color: #CBD5E1; text-transform: uppercase;">Volunteer Name</span>
+          <h3 id="badgeVolName" style="color: #FFFFFF; font-size: 1.5rem; margin-bottom: 0.4rem;">Vigneshwaran R</h3>
+          
+          <span style="font-size: 0.72rem; color: #CBD5E1; text-transform: uppercase;">Assigned Team / Role</span>
+          <p id="badgeVolRole" style="color: var(--accent-gold); font-weight: 700; font-size: 0.95rem; margin-bottom: 0.5rem;">Emergency Ambulance Response</p>
+          
+          <div id="badgeVolCity" style="font-size: 0.82rem; color: #E2E8F0;">Karaikal (Blood Group: O+)</div>
+          <div id="badgeVolDate" style="font-size: 0.75rem; color: #94A3B8; margin-top: 0.25rem;">Active Member Since: Sep 2026</div>
+        </div>
+
+        <div class="flex-between items-center" style="border-top: 1px solid rgba(255,255,255,0.15); padding-top: 0.75rem; font-size: 0.75rem; color: #CBD5E1;">
+          <span><i class="bi bi-shield-check"></i> Verified Community Member</span>
+          <span>Helpline: +91 95004 15161</span>
+        </div>
+      </div>
+
+      <div class="flex gap-2" style="margin-top: 1.5rem;">
+        <button id="btnPrintBadge" class="btn btn-secondary" style="flex: 1;">
+          <i class="bi bi-printer-fill"></i> Save / Print Pass
+        </button>
+        <button class="btn btn-outline" onclick="document.getElementById('volunteerBadgeModal').classList.remove('open'); document.body.style.overflow='';" style="flex: 1;">
+          Done
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Editorial Sanctuary Footer -->
+  <footer class="editorial-footer">
+    <div class="container">
+      <div class="footer-top-grid">
+        <!-- Col 1: Brand Manifesto -->
+        <div>
+          <div class="footer-logo-card">
+            <img src="assets/images/annai-logo.jpeg" alt="Annai Foundation">
+          </div>
+          <p style="font-size: 0.92rem; line-height: 1.7; color: #C7BCB7; margin-bottom: 1.5rem;">
+            A registered non-profit trust dedicated to 24/7 emergency medical rescue, blood donor lifelines, destitute dignity, and youth tech empowerment across coastal Karaikal and Puducherry.
+          </p>
+          <div class="flex gap-2">
+            <span class="tax-badge" style="background: rgba(255,255,255,0.1); color: #FDE68A; padding: 0.35rem 0.75rem; font-size: 0.78rem; border-radius: var(--radius-xs);">
+              <i class="bi bi-patch-check-fill"></i> Section 80G Verified
+            </span>
+            <span class="tax-badge" style="background: rgba(255,255,255,0.1); color: #B7DFCA; padding: 0.35rem 0.75rem; font-size: 0.78rem; border-radius: var(--radius-xs);">
+              <i class="bi bi-shield-check"></i> Reg. No. 12612/23
+            </span>
+          </div>
+        </div>
+
+        <!-- Col 2: Quick Links -->
+        <div>
+          <h4 class="footer-heading">Navigation</h4>
+          <ul class="footer-nav-list">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="programs.html">Causes & Programs</a></li>
+            <li><a href="impact.html">Impact & Stories</a></li>
+            <li><a href="events.html">Camps & Events</a></li>
+            <li><a href="volunteer.html">Volunteer Sign Up</a></li>
+            <li><a href="donate.html">Donate / 80G Tax Exemption</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 3: Core Programs -->
+        <div>
+          <h4 class="footer-heading">Key Initiatives</h4>
+          <ul class="footer-nav-list">
+            <li><a href="programs.html?cat=Healthcare">24/7 Free Ambulance</a></li>
+            <li><a href="programs.html?cat=Healthcare">Emergency Blood Bank</a></li>
+            <li><a href="programs.html?cat=Humanitarian">Destitute Sacred Rites</a></li>
+            <li><a href="programs.html?cat=Education">Grow with Google Labs</a></li>
+            <li><a href="programs.html?cat=Livelihood">Women Tailoring Units</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 4: Emergency Contacts -->
+        <div>
+          <h4 class="footer-heading">Emergency Hotline</h4>
+          <p style="font-size: 0.9rem; color: #C7BCB7; margin-bottom: 0.6rem;">
+            <i class="bi bi-geo-alt-fill" style="color: var(--primary);"></i> Karaikal, Puducherry 609602, India
+          </p>
+          <p style="font-size: 0.9rem; color: #C7BCB7; margin-bottom: 0.6rem;">
+            <i class="bi bi-telephone-fill" style="color: var(--accent-gold);"></i> <strong>24/7 Ambulance :</strong> 95004 15161
+          </p>
+          <p style="font-size: 0.9rem; color: #C7BCB7; margin-bottom: 1.25rem;">
+            <i class="bi bi-envelope-fill" style="color: #10B981;"></i> contact@annaifoundation.com
+          </p>
+          <a href="javascript:void(0)" class="btn btn-outline-white btn-sm" data-action="demo-whatsapp" style="width: 100%;">
+            <i class="bi bi-whatsapp"></i> WhatsApp Helpline
+          </a>
+        </div>
+      </div>
+
+      <div class="footer-bottom-bar">
+        <div>&copy; 2026 Annai Foundation. Registered NGO under Indian Trusts Act. All rights reserved.</div>
+        <div class="flex gap-3">
+          <a href="contact.html" style="color: #9E918C;">Privacy Policy</a>
+          <a href="contact.html" style="color: #9E918C;">Terms of Service</a>
+          <a href="donate.html" style="color: #9E918C;">80G Exemption</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating Quick Action Dock -->
+  <aside class="floating-dock-pill" aria-label="Quick Actions">
+    <a href="donate.html" class="dock-pill-btn dock-pill-donate"><i class="bi bi-heart-fill"></i> <span>Give</span></a>
+    <a href="javascript:void(0)" class="dock-pill-btn dock-pill-emergency" data-action="demo-call"><i class="bi bi-telephone-outbound-fill"></i> <span>24/7 SOS</span></a>
+    <a href="javascript:void(0)" class="dock-pill-btn dock-pill-whatsapp" data-action="demo-whatsapp"><i class="bi bi-whatsapp"></i> <span>WhatsApp</span></a>
+  </aside>
+
+  <!-- JavaScript Modules -->
+  <script src="assets/js/data.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/volunteer.js"></script>
+</body>
+</html>

@@ -1,0 +1,595 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Annai Foundation - When All Hope Fades, Your Kindness Becomes Their Miracle</title>
+  <meta name="description" content="Annai Foundation is a grassroots NGO in Karaikal providing 24/7 free emergency ambulance, blood donor lifelines, dignified final rites for the destitute, and child education.">
+  
+  <!-- Favicon -->
+  <link rel="icon" href="assets/images/logo-preloader.jpeg" type="image/jpeg">
+
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  
+  <!-- Custom Stylesheets -->
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/animations.css">
+</head>
+<body>
+
+  <!-- Floating Island Navigation Bar -->
+  <div class="island-nav-wrapper">
+    <nav class="island-navbar" id="mainIslandNav">
+      <a href="index.html" class="brand-island">
+        <img src="assets/images/annai-logo.jpeg" alt="Annai Foundation - Karaikal">
+      </a>
+
+      <!-- Desktop Nav Links -->
+      <ul class="nav-links-island">
+        <li><a href="index.html" class="nav-link-item active">Home</a></li>
+        <li><a href="programs.html" class="nav-link-item">Causes & Programs</a></li>
+        <li><a href="impact.html" class="nav-link-item">Impact & Stories</a></li>
+        <li><a href="events.html" class="nav-link-item">Camps & Events</a></li>
+        <li><a href="volunteer.html" class="nav-link-item">Volunteer</a></li>
+        <li><a href="contact.html" class="nav-link-item">Contact & SOS</a></li>
+      </ul>
+
+      <!-- Action Items -->
+      <div class="nav-actions-island">
+        <a href="javascript:void(0)" class="sos-pill-btn" data-action="demo-call" title="24/7 Ambulance SOS Hotline">
+          <i class="bi bi-telephone-fill"></i> <span>SOS</span>
+        </a>
+        <a href="donate.html" class="btn-island-donate">
+          <i class="bi bi-heart-fill"></i> Give Hope
+        </a>
+        <button class="mobile-nav-toggle" id="mobileNavToggle" aria-label="Open Navigation">
+          <i class="bi bi-list"></i>
+        </button>
+      </div>
+    </nav>
+  </div>
+
+  <!-- Mobile Drawer Menu -->
+  <div class="mobile-drawer-backdrop" id="drawerBackdrop"></div>
+  <aside class="mobile-drawer-panel" id="drawerPanel">
+    <div class="drawer-top">
+      <div class="flex items-center gap-2">
+        <img src="assets/images/logo-preloader.jpeg" alt="Annai Foundation" style="width: 38px; height: 38px; border-radius: 8px; object-fit: contain;">
+        <div>
+          <strong style="font-family: var(--font-heading); font-size: 1.15rem; display: block; color: var(--text-heading);">Annai Foundation</strong>
+          <span style="font-size: 0.72rem; color: var(--text-muted);">Karaikal • Reg.no.12612/23</span>
+        </div>
+      </div>
+      <button class="drawer-close-btn" id="drawerCloseBtn" aria-label="Close menu">&times;</button>
+    </div>
+
+    <ul class="drawer-links-list">
+      <li><a href="index.html" class="drawer-link active"><i class="bi bi-house-door"></i> Home</a></li>
+      <li><a href="programs.html" class="drawer-link"><i class="bi bi-grid-fill"></i> Causes & Programs</a></li>
+      <li><a href="impact.html" class="drawer-link"><i class="bi bi-graph-up-arrow"></i> Impact & Stories</a></li>
+      <li><a href="events.html" class="drawer-link"><i class="bi bi-calendar-event"></i> Camps & Events</a></li>
+      <li><a href="volunteer.html" class="drawer-link"><i class="bi bi-people-fill"></i> Volunteer With Us</a></li>
+      <li><a href="donate.html" class="drawer-link"><i class="bi bi-gift-fill"></i> Donate / 80G Tax Exemption</a></li>
+      <li><a href="contact.html" class="drawer-link"><i class="bi bi-telephone-fill"></i> Contact & Emergency SOS</a></li>
+    </ul>
+
+    <div style="margin-top: auto; padding-top: 1.5rem; border-top: 1px solid var(--border-subtle);">
+      <a href="javascript:void(0)" class="btn btn-secondary btn-sm" data-action="demo-call" style="width: 100%; margin-bottom: 0.75rem;">
+        <i class="bi bi-telephone-fill"></i> 24/7 Ambulance SOS
+      </a>
+      <a href="donate.html" class="btn btn-primary btn-sm" style="width: 100%;">
+        <i class="bi bi-heart-fill"></i> Make a Donation
+      </a>
+    </div>
+  </aside>
+
+  <!-- Magazine-Split Hero Section -->
+  <section class="section" style="padding-top: 4.5rem; padding-bottom: 5rem;">
+    <div class="container">
+      <div class="grid grid-2" style="align-items: center; gap: 3.5rem;">
+        
+        <!-- Left Editorial Column -->
+        <div class="reveal">
+          <span class="badge-pill badge-terracotta">
+            <span class="animate-pulse-heart"><i class="bi bi-heart-fill"></i></span> 
+            Grassroots Compassion in Karaikal
+          </span>
+          <h1 style="margin-bottom: 1.25rem; font-size: clamp(2.3rem, 4.2vw, 3.7rem);">
+            Where Despair Meets a Lifeline, <span class="text-gradient">Your Kindness</span> Rebuilds a Life.
+          </h1>
+          <p class="lead-text" style="margin-bottom: 2rem;">
+            From midnight 24/7 emergency ambulance dispatches to providing warm daily meals for abandoned elders and Google certifications for rural youth, Annai Foundation stands as Karaikal's unwavering safety net.
+          </p>
+
+          <!-- Interactive Hero Giving Chips -->
+          <div class="giving-chips-wrapper">
+            <div class="flex-between items-center" style="margin-bottom: 0.85rem;">
+              <strong style="font-family: var(--font-display); font-size: 0.95rem; color: var(--text-heading);">Select a Tangible Lifeline Gift:</strong>
+              <span class="tax-badge" style="background: var(--secondary-light); color: var(--secondary); font-size: 0.75rem; font-weight: 700; padding: 0.2rem 0.6rem; border-radius: var(--radius-xs);">
+                <i class="bi bi-patch-check-fill"></i> 80G 50% Tax Exemption
+              </span>
+            </div>
+
+            <div class="giving-chips-grid">
+              <button class="chip-btn active" data-amount="500">₹500</button>
+              <button class="chip-btn" data-amount="1000">₹1,000</button>
+              <button class="chip-btn" data-amount="2500">₹2,500</button>
+              <button class="chip-btn" data-amount="5000">₹5,000</button>
+            </div>
+
+            <div class="flex gap-2 items-center">
+              <input type="number" id="heroCustomAmount" class="custom-chip-input" placeholder="Or custom amount (₹)" style="margin-bottom: 0;">
+              <button id="btnHeroDonateGo" class="btn btn-primary" style="white-space: nowrap; padding: 0.75rem 1.5rem;">
+                Donate <i class="bi bi-arrow-right"></i>
+              </button>
+            </div>
+            
+            <div id="heroImpactDynamicText" style="margin-top: 0.85rem; font-size: 0.85rem; color: var(--text-muted); font-style: italic;">
+              <i class="bi bi-check-circle-fill" style="color: var(--secondary);"></i> <strong>₹500</strong> provides 25 fresh hot nutritious meals for destitute elders today.
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Arched Imagery Column -->
+        <div class="reveal reveal-delay-1" style="position: relative;">
+          <div class="arch-frame" style="height: 520px; width: 100%;">
+            <img src="assets/images/original/banner-1.jpg" alt="Annai Foundation Community in Karaikal">
+          </div>
+
+          <!-- Floating Impact Card 1 -->
+          <div class="animate-float" style="position: absolute; bottom: 2rem; left: -1.5rem; background: rgba(255, 255, 255, 0.96); backdrop-filter: blur(12px); border: 1px solid var(--border-subtle); padding: 1.15rem 1.5rem; border-radius: var(--radius-lg); box-shadow: var(--shadow-hover); display: flex; align-items: center; gap: 1rem;">
+            <div style="width: 44px; height: 44px; border-radius: 50%; background: var(--primary-light); color: var(--primary); display: flex; align-items: center; justify-content: center; font-size: 1.3rem;">
+              <i class="bi bi-heart-pulse-fill"></i>
+            </div>
+            <div>
+              <div style="font-family: var(--font-display); font-size: 1.35rem; font-weight: 800; color: var(--text-heading); line-height: 1;">15,850+</div>
+              <span style="font-size: 0.75rem; color: var(--text-muted); font-weight: 700; text-transform: uppercase;">Lives Touched in Karaikal</span>
+            </div>
+          </div>
+
+          <!-- Floating Impact Card 2 -->
+          <div class="animate-float-delay" style="position: absolute; top: 2rem; right: -1rem; background: rgba(27, 67, 50, 0.95); backdrop-filter: blur(12px); color: #FFFFFF; padding: 0.85rem 1.25rem; border-radius: var(--radius-full); box-shadow: var(--shadow-card); display: flex; align-items: center; gap: 0.65rem;">
+            <span style="display: inline-block; width: 10px; height: 10px; border-radius: 50%; background: #10B981; animation: heartPulse 1.5s infinite;"></span>
+            <span style="font-family: var(--font-display); font-size: 0.82rem; font-weight: 700;">24/7 Ambulance On Standby</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Live Marquee Ticker -->
+  <div class="ticker-marquee-track">
+    <div class="ticker-marquee-content">
+      <span>🚑 24/7 Free Emergency Ambulance Dispatch Across Karaikal</span>
+      <span>🩸 Urgent Blood & Platelet Donor Matching Helpline</span>
+      <span>🎓 Complimentary 'Grow with Google' Youth Digital Certifications</span>
+      <span>🍲 Daily Fresh Nutrition & Food Relief for Destitute Elders</span>
+      <span>🕊️ Dignified Sacred Last Rites for Unknown Homeless Departed</span>
+      <span>📜 100% Tax Deductible under Section 80G (Reg. No. 12612/23)</span>
+    </div>
+    <div class="ticker-marquee-content" aria-hidden="true">
+      <span>🚑 24/7 Free Emergency Ambulance Dispatch Across Karaikal</span>
+      <span>🩸 Urgent Blood & Platelet Donor Matching Helpline</span>
+      <span>🎓 Complimentary 'Grow with Google' Youth Digital Certifications</span>
+      <span>🍲 Daily Fresh Nutrition & Food Relief for Destitute Elders</span>
+      <span>🕊️ Dignified Sacred Last Rites for Unknown Homeless Departed</span>
+      <span>📜 100% Tax Deductible under Section 80G (Reg. No. 12612/23)</span>
+    </div>
+  </div>
+
+  <!-- "24 Hours of Lifeline in Karaikal" Timeline Section -->
+  <section class="section section-bg-subtle">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="badge-pill badge-evergreen">The Daily Rhythm</span>
+        <h2 class="section-title">24 Hours in the Life of Annai Foundation</h2>
+        <p class="section-subtitle">Every single hour of every day, our volunteers and responders are awake, active, and standing guard over fragile lives.</p>
+      </div>
+
+      <div class="timeline-24h-grid">
+        <!-- 02:15 AM -->
+        <div class="timeline-step-card reveal">
+          <div class="time-badge-pill"><i class="bi bi-moon-stars-fill" style="color: #6366F1;"></i> 02:15 AM</div>
+          <h3 style="font-size: 1.2rem; margin-bottom: 0.5rem;">Midnight Highway SOS</h3>
+          <p style="font-size: 0.9rem; color: var(--text-body); margin-bottom: 0;">
+            Our ambulance rushes with oxygen and trained first-responders to stabilize road polytrauma victims within 9 minutes.
+          </p>
+        </div>
+
+        <!-- 06:30 AM -->
+        <div class="timeline-step-card reveal reveal-delay-1">
+          <div class="time-badge-pill"><i class="bi bi-sunrise-fill" style="color: var(--accent-gold);"></i> 06:30 AM</div>
+          <h3 style="font-size: 1.2rem; margin-bottom: 0.5rem;">Warm Breakfast Kitchen</h3>
+          <p style="font-size: 0.9rem; color: var(--text-body); margin-bottom: 0;">
+            Volunteers prepare and distribute fresh, hygienic meals and clean drinking water to abandoned elders near the railway terminus.
+          </p>
+        </div>
+
+        <!-- 10:00 AM -->
+        <div class="timeline-step-card reveal reveal-delay-2">
+          <div class="time-badge-pill"><i class="bi bi-laptop" style="color: var(--secondary);"></i> 10:00 AM</div>
+          <h3 style="font-size: 1.2rem; margin-bottom: 0.5rem;">Google Tech Lab</h3>
+          <p style="font-size: 0.9rem; color: var(--text-body); margin-bottom: 0;">
+            Underprivileged college graduates receive hands-on training in cloud tools, resume drafting, and interview confidence.
+          </p>
+        </div>
+
+        <!-- 04:30 PM -->
+        <div class="timeline-step-card reveal reveal-delay-3">
+          <div class="time-badge-pill"><i class="bi bi-droplet-fill" style="color: var(--accent-red);"></i> 04:30 PM</div>
+          <h3 style="font-size: 1.2rem; margin-bottom: 0.5rem;">Emergency Blood Desk</h3>
+          <p style="font-size: 0.9rem; color: var(--text-body); margin-bottom: 0;">
+            Immediate coordination for critical dengue, surgery, and neonatal emergency platelet transfusions at local hospitals.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Asymmetric Bento Impact Showcase -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="badge-pill badge-terracotta">Measurable Hope</span>
+        <h2 class="section-title">Audited Milestones of Human Transformation</h2>
+        <p class="section-subtitle">Real numbers audited for complete transparency and governance.</p>
+      </div>
+
+      <div class="bento-grid">
+        <!-- Bento 1: Ambulance Mega Card (Col 7) -->
+        <div class="bento-card bento-col-7 bento-evergreen reveal">
+          <span class="badge-pill" style="background: rgba(255,255,255,0.15); color: #FFFFFF; border: none; margin-bottom: 0.75rem;">
+            <i class="bi bi-ambulance"></i> Emergency Lifeline
+          </span>
+          <h3 style="font-size: 2.2rem; margin-bottom: 0.5rem;">4,280+ Critical Trips</h3>
+          <p style="font-size: 1.05rem; line-height: 1.7; margin-bottom: 1.5rem;">
+            Equipped with oxygen cylinders, folding stretchers, and first-aid kits, our ambulance fleet operates without delay across Karaikal and Puducherry coastlines.
+          </p>
+          <div class="flex gap-3 flex-wrap" style="border-top: 1px solid rgba(255, 255, 255, 0.15); padding-top: 1rem;">
+            <div>
+              <span style="font-size: 0.75rem; color: #B7DFCA; text-transform: uppercase;">Average Response Time</span>
+              <div style="font-family: var(--font-display); font-size: 1.3rem; font-weight: 800;">8.5 Minutes</div>
+            </div>
+            <div>
+              <span style="font-size: 0.75rem; color: #B7DFCA; text-transform: uppercase;">Emergency Dispatcher</span>
+              <div style="font-family: var(--font-display); font-size: 1.3rem; font-weight: 800;">24/7 Available</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Bento 2: 80G Tax Savings Interactive Card (Col 5) -->
+        <div class="bento-card bento-col-5 bento-almond reveal reveal-delay-1">
+          <div class="flex-between items-center" style="margin-bottom: 1rem;">
+            <span class="badge-pill badge-evergreen" style="margin-bottom: 0;"><i class="bi bi-patch-check-fill"></i> Tax Exemption</span>
+            <span style="font-family: var(--font-display); font-weight: 800; color: var(--secondary);">Section 80G</span>
+          </div>
+          <h4 style="font-size: 1.3rem; margin-bottom: 0.5rem;">50% Direct Tax Savings</h4>
+          <p style="font-size: 0.88rem; color: var(--text-body); margin-bottom: 1rem;">
+            Calculate your immediate income tax benefit when donating to Annai Foundation:
+          </p>
+          
+          <div style="background: var(--bg-surface); padding: 1rem; border-radius: var(--radius-sm); border: 1px solid var(--border-subtle); margin-bottom: 1rem;">
+            <div class="flex-between items-center" style="font-size: 0.85rem; margin-bottom: 0.35rem;">
+              <span>Gift Amount:</span>
+              <strong id="bentoCalcInputText">₹5,000</strong>
+            </div>
+            <input type="range" id="bentoTaxRange" min="1000" max="50000" step="1000" value="5000" style="width: 100%; accent-color: var(--primary);">
+            <div class="flex-between items-center" style="font-size: 0.85rem; margin-top: 0.5rem; color: var(--secondary); font-weight: 700;">
+              <span>80G Tax Deduction:</span>
+              <span id="bentoTaxDeductText" style="font-size: 1.1rem;">₹2,500</span>
+            </div>
+          </div>
+          <a href="donate.html" class="btn btn-primary btn-sm" style="width: 100%;">
+            Donate & Claim 80G Receipt
+          </a>
+        </div>
+
+        <!-- Bento 3: Blood Network (Col 4) -->
+        <div class="bento-card bento-col-4 reveal">
+          <div style="width: 44px; height: 44px; border-radius: 50%; background: #FEE2E2; color: #DC2626; display: flex; align-items: center; justify-content: center; font-size: 1.3rem; margin-bottom: 1rem;">
+            <i class="bi bi-droplet-fill"></i>
+          </div>
+          <h4 style="font-size: 1.8rem; margin-bottom: 0.25rem;">2,940+</h4>
+          <strong style="display: block; font-family: var(--font-display); font-size: 0.95rem; margin-bottom: 0.5rem;">Blood & Platelet Units Arranged</strong>
+          <p style="font-size: 0.85rem; color: var(--text-body); margin-bottom: 0;">
+            Coordinating voluntary donor camps across colleges and maintaining an active donor roster in Karaikal.
+          </p>
+        </div>
+
+        <!-- Bento 4: Destitute Dignity (Col 4) -->
+        <div class="bento-card bento-col-4 reveal reveal-delay-1">
+          <div style="width: 44px; height: 44px; border-radius: 50%; background: var(--bg-subtle); color: var(--text-heading); display: flex; align-items: center; justify-content: center; font-size: 1.3rem; margin-bottom: 1rem;">
+            <i class="bi bi-flower1"></i>
+          </div>
+          <h4 style="font-size: 1.8rem; margin-bottom: 0.25rem;">1,240+</h4>
+          <strong style="display: block; font-family: var(--font-display); font-size: 0.95rem; margin-bottom: 0.5rem;">Dignified Final Rites</strong>
+          <p style="font-size: 0.85rem; color: var(--text-body); margin-bottom: 0;">
+            Ensuring every unclaimed deceased soul receives traditional flowers, sacred prayers, and honorable farewell.
+          </p>
+        </div>
+
+        <!-- Bento 5: Google Digital Skills (Col 4) -->
+        <div class="bento-card bento-col-4 reveal reveal-delay-2">
+          <div style="width: 44px; height: 44px; border-radius: 50%; background: var(--accent-gold-light); color: #B45309; display: flex; align-items: center; justify-content: center; font-size: 1.3rem; margin-bottom: 1rem;">
+            <i class="bi bi-award-fill"></i>
+          </div>
+          <h4 style="font-size: 1.8rem; margin-bottom: 0.25rem;">3,650+</h4>
+          <strong style="display: block; font-family: var(--font-display); font-size: 0.95rem; margin-bottom: 0.5rem;">Youth Certified in Tech</strong>
+          <p style="font-size: 0.85rem; color: var(--text-body); margin-bottom: 0;">
+            Bridging rural college graduates with workplace digital literacy, Google tools, and career confidence.
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Featured Causes & Programs Grid -->
+  <section class="section section-bg-subtle">
+    <div class="container">
+      <div class="flex-between items-center flex-wrap gap-2" style="margin-bottom: 3.5rem;">
+        <div>
+          <span class="badge-pill badge-terracotta">Our Core Missions</span>
+          <h2 class="section-title" style="margin-bottom: 0;">Programs Delivering Direct Relief</h2>
+        </div>
+        <a href="programs.html" class="btn btn-outline">
+          Explore All 7 Programs <i class="bi bi-arrow-right"></i>
+        </a>
+      </div>
+
+      <div class="grid grid-3">
+        <!-- Cause 1 -->
+        <div class="bento-card reveal" style="padding: 0;">
+          <div style="height: 220px; overflow: hidden;">
+            <img src="assets/images/original/Emergency-Ambulance-Service.png" alt="24/7 Ambulance" style="width: 100%; height: 100%; object-fit: cover;">
+          </div>
+          <div style="padding: 1.75rem;">
+            <span class="badge-pill badge-evergreen" style="font-size: 0.72rem; margin-bottom: 0.5rem;">Healthcare Emergency</span>
+            <h3 style="font-size: 1.3rem; margin-bottom: 0.6rem;">24/7 Emergency Ambulance Lifeline</h3>
+            <p style="font-size: 0.88rem; color: var(--text-body); margin-bottom: 1rem;">
+              Round-the-clock free and subsidized emergency medical transportation equipped with oxygen and first responders.
+            </p>
+            <div class="progress-container">
+              <div class="progress-header">
+                <span>Raised: ₹6,80,000</span>
+                <span>Goal: ₹10,00,000</span>
+              </div>
+              <div class="progress-track"><div class="progress-fill" style="width: 68%;"></div></div>
+            </div>
+            <a href="donate.html?cause=ambulance" class="btn btn-primary btn-sm" style="width: 100%;">
+              <i class="bi bi-heart-fill"></i> Sponsor Fuel & Oxygen
+            </a>
+          </div>
+        </div>
+
+        <!-- Cause 2 -->
+        <div class="bento-card reveal reveal-delay-1" style="padding: 0;">
+          <div style="height: 220px; overflow: hidden;">
+            <img src="assets/images/google-skills-lab.jpg" alt="South Indian Students at Google Skills Lab" style="width: 100%; height: 100%; object-fit: cover;">
+          </div>
+          <div style="padding: 1.75rem;">
+            <span class="badge-pill badge-saffron" style="font-size: 0.72rem; margin-bottom: 0.5rem;">Youth & Digital Career</span>
+            <h3 style="font-size: 1.3rem; margin-bottom: 0.6rem;">Grow with Google Skills Labs</h3>
+            <p style="font-size: 0.88rem; color: var(--text-body); margin-bottom: 1rem;">
+              Free practical workshops providing rural graduates with modern digital fluency, spreadsheets, and career coaching.
+            </p>
+            <div class="progress-container">
+              <div class="progress-header">
+                <span>Raised: ₹4,20,000</span>
+                <span>Goal: ₹6,00,000</span>
+              </div>
+              <div class="progress-track"><div class="progress-fill" style="width: 70%;"></div></div>
+            </div>
+            <a href="donate.html?cause=google-skills" class="btn btn-primary btn-sm" style="width: 100%;">
+              <i class="bi bi-heart-fill"></i> Sponsor a Student
+            </a>
+          </div>
+        </div>
+
+        <!-- Cause 3 -->
+        <div class="bento-card reveal reveal-delay-2" style="padding: 0;">
+          <div style="height: 220px; overflow: hidden;">
+            <img src="assets/images/original/Social-Welfare.png" alt="Destitute Care" style="width: 100%; height: 100%; object-fit: cover;">
+          </div>
+          <div style="padding: 1.75rem;">
+            <span class="badge-pill badge-terracotta" style="font-size: 0.72rem; margin-bottom: 0.5rem;">Destitute Welfare</span>
+            <h3 style="font-size: 1.3rem; margin-bottom: 0.6rem;">Sacred Rites & Destitute Shelter</h3>
+            <p style="font-size: 0.88rem; color: var(--text-body); margin-bottom: 1rem;">
+              Warm meals, medical support, and dignified final rites ensuring no human being leaves this world uncared for.
+            </p>
+            <div class="progress-container">
+              <div class="progress-header">
+                <span>Raised: ₹3,10,000</span>
+                <span>Goal: ₹4,50,000</span>
+              </div>
+              <div class="progress-track"><div class="progress-fill" style="width: 69%;"></div></div>
+            </div>
+            <a href="donate.html?cause=destitute-rites" class="btn btn-primary btn-sm" style="width: 100%;">
+              <i class="bi bi-heart-fill"></i> Support Sacred Care
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Real Transformation Stories -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="badge-pill badge-terracotta">Human Stories</span>
+        <h2 class="section-title">Lives Restored, Hopes Rekindled</h2>
+        <p class="section-subtitle">Behind every metric is an individual with dreams, family, and a second chance at life.</p>
+      </div>
+
+      <div class="grid grid-2" style="gap: 2.5rem; align-items: stretch;">
+        <!-- Story 1: Murugesan -->
+        <div class="bento-card reveal" style="display: flex; flex-direction: column;">
+          <div class="flex items-center gap-3" style="margin-bottom: 1.25rem;">
+            <img src="assets/images/murugesan-profile.jpg" alt="Murugesan" style="width: 64px; height: 64px; border-radius: 50%; object-fit: cover; border: 2px solid var(--primary);">
+            <div>
+              <h3 style="font-size: 1.3rem; margin-bottom: 0.1rem;">Murugesan</h3>
+              <span style="font-size: 0.8rem; color: var(--secondary); font-weight: 700;">Accident Survivor • Karaikal ECR</span>
+            </div>
+          </div>
+          <p style="font-size: 0.95rem; line-height: 1.7; flex: 1; margin-bottom: 1.25rem;">
+            "When my motorcycle skidded on the dark ECR curve, I was unconscious and bleeding. Bystanders called Annai Foundation. Their ambulance arrived in 8 minutes with oxygen and safely moved me to JIPMER hospital. Today, I am back with my two young daughters."
+          </p>
+          <div style="background: var(--bg-subtle); padding: 0.85rem 1rem; border-radius: var(--radius-sm); font-size: 0.82rem; font-style: italic; border-left: 3px solid var(--primary);">
+            Outcome: Full physical recovery & returned to daily agricultural livelihood.
+          </div>
+        </div>
+
+        <!-- Story 2: Priya -->
+        <div class="bento-card reveal reveal-delay-1" style="display: flex; flex-direction: column;">
+          <div class="flex items-center gap-3" style="margin-bottom: 1.25rem;">
+            <img src="assets/images/priya-profile.jpg" alt="Priya" style="width: 64px; height: 64px; border-radius: 50%; object-fit: cover; border: 2px solid var(--secondary);">
+            <div>
+              <h3 style="font-size: 1.3rem; margin-bottom: 0.1rem;">Priya</h3>
+              <span style="font-size: 0.8rem; color: var(--secondary); font-weight: 700;">Google Skills Graduate • Junior IT Executive</span>
+            </div>
+          </div>
+          <p style="font-size: 0.95rem; line-height: 1.7; flex: 1; margin-bottom: 1.25rem;">
+            "As a fisherman's daughter, I had a degree but lacked the confidence to face modern office interviews. The free Google digital workshop by Annai Foundation gave me hands-on software fluency and interview coaching. I now earn a salary that supports my family."
+          </p>
+          <div style="background: var(--bg-subtle); padding: 0.85rem 1rem; border-radius: var(--radius-sm); font-size: 0.82rem; font-style: italic; border-left: 3px solid var(--secondary);">
+            Outcome: First graduate in family with formal corporate employment.
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Interactive Impact Outcome Studio -->
+  <section class="section section-bg-sand">
+    <div class="container text-center" style="max-width: 800px;">
+      <span class="badge-pill badge-evergreen">Tangible Impact</span>
+      <h2 class="section-title">See How Far Your Gift Travels</h2>
+      <p class="section-subtitle" style="margin-bottom: 2.5rem;">Every rupee is channeled directly to frontline survival and skill building.</p>
+
+      <div class="bento-card" style="text-align: left; padding: 2.5rem;">
+        <div class="flex-between items-center" style="margin-bottom: 0.75rem;">
+          <span style="font-family: var(--font-display); font-weight: 700; font-size: 1.1rem; color: var(--text-heading);">Contribution Amount:</span>
+          <span id="studioAmountDisplay" style="font-family: var(--font-heading); font-size: 2.2rem; font-weight: 800; color: var(--primary);">₹2,500</span>
+        </div>
+
+        <input type="range" id="studioRange" min="500" max="25000" step="500" value="2500" style="width: 100%; height: 8px; accent-color: var(--primary); margin-bottom: 2rem;">
+
+        <div class="grid grid-3 text-center" style="gap: 1rem; margin-bottom: 1.75rem;">
+          <div style="background: var(--bg-canvas); padding: 1.25rem 1rem; border-radius: var(--radius-md); border: 1px solid var(--border-subtle);">
+            <div id="studioMealsVal" style="font-family: var(--font-display); font-size: 1.6rem; font-weight: 800; color: var(--primary);">125</div>
+            <span style="font-size: 0.78rem; color: var(--text-muted); font-weight: 700;">Hot Meals Provided</span>
+          </div>
+          <div style="background: var(--bg-canvas); padding: 1.25rem 1rem; border-radius: var(--radius-md); border: 1px solid var(--border-subtle);">
+            <div id="studioFuelVal" style="font-family: var(--font-display); font-size: 1.6rem; font-weight: 800; color: var(--secondary);">3</div>
+            <span style="font-size: 0.78rem; color: var(--text-muted); font-weight: 700;">Ambulance SOS Trips</span>
+          </div>
+          <div style="background: var(--bg-canvas); padding: 1.25rem 1rem; border-radius: var(--radius-md); border: 1px solid var(--border-subtle);">
+            <div id="studioKitsVal" style="font-family: var(--font-display); font-size: 1.6rem; font-weight: 800; color: #B45309;">5</div>
+            <span style="font-size: 0.78rem; color: var(--text-muted); font-weight: 700;">Student Study Kits</span>
+          </div>
+        </div>
+
+        <a href="donate.html?amount=2500" id="btnStudioDonate" class="btn btn-primary btn-lg" style="width: 100%;">
+          <i class="bi bi-heart-fill"></i> Complete This Lifeline Gift
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Editorial Sanctuary Footer -->
+  <footer class="editorial-footer">
+    <div class="container">
+      <div class="footer-top-grid">
+        <!-- Col 1: Brand Manifesto -->
+        <div>
+          <div class="footer-logo-card">
+            <img src="assets/images/annai-logo.jpeg" alt="Annai Foundation">
+          </div>
+          <p style="font-size: 0.92rem; line-height: 1.7; color: #C7BCB7; margin-bottom: 1.5rem;">
+            A registered non-profit trust dedicated to 24/7 emergency medical rescue, blood donor lifelines, destitute dignity, and youth tech empowerment across coastal Karaikal and Puducherry.
+          </p>
+          <div class="flex gap-2">
+            <span class="tax-badge" style="background: rgba(255,255,255,0.1); color: #FDE68A; padding: 0.35rem 0.75rem; font-size: 0.78rem; border-radius: var(--radius-xs);">
+              <i class="bi bi-patch-check-fill"></i> Section 80G Verified
+            </span>
+            <span class="tax-badge" style="background: rgba(255,255,255,0.1); color: #B7DFCA; padding: 0.35rem 0.75rem; font-size: 0.78rem; border-radius: var(--radius-xs);">
+              <i class="bi bi-shield-check"></i> Reg. No. 12612/23
+            </span>
+          </div>
+        </div>
+
+        <!-- Col 2: Quick Links -->
+        <div>
+          <h4 class="footer-heading">Navigation</h4>
+          <ul class="footer-nav-list">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="programs.html">Causes & Programs</a></li>
+            <li><a href="impact.html">Impact & Stories</a></li>
+            <li><a href="events.html">Camps & Events</a></li>
+            <li><a href="volunteer.html">Volunteer Sign Up</a></li>
+            <li><a href="donate.html">Donate / 80G Tax Exemption</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 3: Core Programs -->
+        <div>
+          <h4 class="footer-heading">Key Initiatives</h4>
+          <ul class="footer-nav-list">
+            <li><a href="programs.html?cat=Healthcare">24/7 Free Ambulance</a></li>
+            <li><a href="programs.html?cat=Healthcare">Emergency Blood Bank</a></li>
+            <li><a href="programs.html?cat=Humanitarian">Destitute Sacred Rites</a></li>
+            <li><a href="programs.html?cat=Education">Grow with Google Labs</a></li>
+            <li><a href="programs.html?cat=Livelihood">Women Tailoring Units</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 4: Emergency Contacts -->
+        <div>
+          <h4 class="footer-heading">Emergency Hotline</h4>
+          <p style="font-size: 0.9rem; color: #C7BCB7; margin-bottom: 0.6rem;">
+            <i class="bi bi-geo-alt-fill" style="color: var(--primary);"></i> Karaikal, Puducherry 609602, India
+          </p>
+          <p style="font-size: 0.9rem; color: #C7BCB7; margin-bottom: 0.6rem;">
+            <i class="bi bi-telephone-fill" style="color: var(--accent-gold);"></i> <strong>24/7 Ambulance :</strong> 95004 15161
+          </p>
+          <p style="font-size: 0.9rem; color: #C7BCB7; margin-bottom: 1.25rem;">
+            <i class="bi bi-envelope-fill" style="color: #10B981;"></i> contact@annaifoundation.com
+          </p>
+          <a href="javascript:void(0)" class="btn btn-outline-white btn-sm" data-action="demo-whatsapp" style="width: 100%;">
+            <i class="bi bi-whatsapp"></i> WhatsApp Helpline
+          </a>
+        </div>
+      </div>
+
+      <div class="footer-bottom-bar">
+        <div>&copy; 2026 Annai Foundation. Registered NGO under Indian Trusts Act. All rights reserved.</div>
+        <div class="flex gap-3">
+          <a href="contact.html" style="color: #9E918C;">Privacy Policy</a>
+          <a href="contact.html" style="color: #9E918C;">Terms of Service</a>
+          <a href="donate.html" style="color: #9E918C;">80G Exemption</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating Quick Action Dock -->
+  <aside class="floating-dock-pill" aria-label="Quick Actions">
+    <a href="donate.html" class="dock-pill-btn dock-pill-donate">
+      <i class="bi bi-heart-fill"></i> <span>Give</span>
+    </a>
+    <a href="javascript:void(0)" class="dock-pill-btn dock-pill-emergency" data-action="demo-call">
+      <i class="bi bi-telephone-outbound-fill"></i> <span>24/7 SOS</span>
+    </a>
+    <a href="javascript:void(0)" class="dock-pill-btn dock-pill-whatsapp" data-action="demo-whatsapp">
+      <i class="bi bi-whatsapp"></i> <span>WhatsApp</span>
+    </a>
+  </aside>
+
+  <!-- JavaScript Modules -->
+  <script src="assets/js/data.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

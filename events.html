@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Community Events & Calendar - Annai Foundation</title>
+  <meta name="description" content="View upcoming blood donation camps, Google digital skills workshops, health checkups, and volunteer training organized by Annai Foundation in Karaikal.">
+  
+  <link rel="icon" href="assets/images/logo-preloader.jpeg" type="image/jpeg">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/animations.css">
+</head>
+<body>
+
+  <!-- Floating Island Navigation Bar -->
+  <div class="island-nav-wrapper">
+    <nav class="island-navbar" id="mainIslandNav">
+      <a href="index.html" class="brand-island">
+        <img src="assets/images/annai-logo.jpeg" alt="Annai Foundation - Karaikal">
+      </a>
+
+      <ul class="nav-links-island">
+        <li><a href="index.html" class="nav-link-item">Home</a></li>
+        <li><a href="programs.html" class="nav-link-item">Causes & Programs</a></li>
+        <li><a href="impact.html" class="nav-link-item">Impact & Stories</a></li>
+        <li><a href="events.html" class="nav-link-item active">Camps & Events</a></li>
+        <li><a href="volunteer.html" class="nav-link-item">Volunteer</a></li>
+        <li><a href="contact.html" class="nav-link-item">Contact & SOS</a></li>
+      </ul>
+
+      <div class="nav-actions-island">
+        <a href="javascript:void(0)" class="sos-pill-btn" data-action="demo-call">
+          <i class="bi bi-telephone-fill"></i> <span>SOS: 95004 15161</span>
+        </a>
+        <a href="donate.html" class="btn-island-donate">
+          <i class="bi bi-heart-fill"></i> Give Hope
+        </a>
+        <button class="mobile-nav-toggle" id="mobileNavToggle" aria-label="Open Navigation">
+          <i class="bi bi-list"></i>
+        </button>
+      </div>
+    </nav>
+  </div>
+
+  <!-- Mobile Drawer Menu -->
+  <div class="mobile-drawer-backdrop" id="drawerBackdrop"></div>
+  <aside class="mobile-drawer-panel" id="drawerPanel">
+    <div class="drawer-top">
+      <div class="flex items-center gap-2">
+        <img src="assets/images/logo-preloader.jpeg" alt="Annai Foundation" style="width: 38px; height: 38px; border-radius: 8px; object-fit: contain;">
+        <div>
+          <strong style="font-family: var(--font-heading); font-size: 1.15rem; display: block; color: var(--text-heading);">Annai Foundation</strong>
+          <span style="font-size: 0.72rem; color: var(--text-muted);">Karaikal • Reg.no.12612/23</span>
+        </div>
+      </div>
+      <button class="drawer-close-btn" id="drawerCloseBtn" aria-label="Close menu">&times;</button>
+    </div>
+
+    <ul class="drawer-links-list">
+      <li><a href="index.html" class="drawer-link"><i class="bi bi-house-door"></i> Home</a></li>
+      <li><a href="programs.html" class="drawer-link"><i class="bi bi-grid-fill"></i> Causes & Programs</a></li>
+      <li><a href="impact.html" class="drawer-link"><i class="bi bi-graph-up-arrow"></i> Impact & Stories</a></li>
+      <li><a href="events.html" class="drawer-link active"><i class="bi bi-calendar-event"></i> Camps & Events</a></li>
+      <li><a href="volunteer.html" class="drawer-link"><i class="bi bi-people-fill"></i> Volunteer With Us</a></li>
+      <li><a href="donate.html" class="drawer-link"><i class="bi bi-gift-fill"></i> Donate / 80G Tax Exemption</a></li>
+      <li><a href="contact.html" class="drawer-link"><i class="bi bi-telephone-fill"></i> Contact & Emergency SOS</a></li>
+    </ul>
+  </aside>
+
+  <!-- Editorial Page Header -->
+  <section class="section-sm" style="padding-top: 4.5rem; background: var(--bg-subtle); border-bottom: 1px solid var(--border-subtle);">
+    <div class="container text-center" style="max-width: 760px;">
+      <span class="badge-pill badge-evergreen"><i class="bi bi-calendar-event"></i> Community Action</span>
+      <h1 style="font-size: clamp(2.2rem, 3.8vw, 3.2rem); margin-bottom: 0.85rem;">Lifeline Camps & Workshops</h1>
+      <p class="section-subtitle">
+        Join our voluntary blood donation drives, Google digital literacy workshops, and free health screening camps across Karaikal.
+      </p>
+    </div>
+  </section>
+
+  <!-- Interactive Calendar & Events Layout -->
+  <section class="section">
+    <div class="container">
+      <div class="grid" style="grid-template-columns: 1fr 1.65fr; align-items: start; gap: 3rem;">
+
+        <!-- Left Column: Interactive Month Calendar Widget -->
+        <div>
+          <div class="calendar-card">
+            <div class="calendar-top-bar">
+              <h3 id="calendarMonthName" style="font-size: 1.3rem; margin-bottom: 0;">September 2026</h3>
+              <div class="flex gap-1">
+                <button id="calPrevMonth" class="btn btn-sm btn-outline" style="padding: 0.35rem 0.65rem;" aria-label="Previous Month"><i class="bi bi-chevron-left"></i></button>
+                <button id="calNextMonth" class="btn btn-sm btn-outline" style="padding: 0.35rem 0.65rem;" aria-label="Next Month"><i class="bi bi-chevron-right"></i></button>
+              </div>
+            </div>
+
+            <div class="calendar-grid-header">
+              <span>Sun</span><span>Mon</span><span>Tue</span><span>Wed</span><span>Thu</span><span>Fri</span><span>Sat</span>
+            </div>
+
+            <div class="calendar-days-grid" id="calendarDaysGrid">
+              <!-- Rendered dynamically by calendar.js -->
+            </div>
+
+            <div style="margin-top: 1.5rem; padding-top: 1rem; border-top: 1px solid var(--border-subtle); font-size: 0.8rem; color: var(--text-muted); display: flex; align-items: center; gap: 1rem;">
+              <div class="flex items-center gap-1">
+                <span style="display: inline-block; width: 8px; height: 8px; border-radius: 50%; background: var(--primary);"></span>
+                <span>Scheduled Camp</span>
+              </div>
+              <div class="flex items-center gap-1">
+                <span style="display: inline-block; width: 8px; height: 8px; border-radius: 50%; background: var(--secondary);"></span>
+                <span>Today</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Host a Camp Card -->
+          <div class="bento-card" style="margin-top: 2rem; background: var(--bg-subtle);">
+            <h4 style="font-size: 1.15rem; margin-bottom: 0.4rem;">Host a Camp on Your Campus</h4>
+            <p style="font-size: 0.88rem; color: var(--text-body); margin-bottom: 1rem;">
+              Want to organize a blood donation drive or Google AI boot camp at your college or company? We provide all doctors, equipment, and certificates free of cost.
+            </p>
+            <a href="contact.html?inquiry=HostCamp" class="btn btn-secondary btn-sm" style="width: 100%;">
+              <i class="bi bi-megaphone-fill"></i> Request Camp Collaboration
+            </a>
+          </div>
+        </div>
+
+        <!-- Right Column: Filterable Event Cards List -->
+        <div>
+          <div class="flex-between flex-wrap gap-2" style="margin-bottom: 1.5rem;">
+            <div class="filter-pills-bar" style="margin-bottom: 0; justify-content: flex-start;">
+              <button class="event-filter-btn filter-pill active" data-category="all">All Events</button>
+              <button class="event-filter-btn filter-pill" data-category="Healthcare">Healthcare</button>
+              <button class="event-filter-btn filter-pill" data-category="Education">Google Skills</button>
+            </div>
+          </div>
+
+          <div id="eventsListContainer" class="flex flex-col gap-3">
+            <!-- Rendered by calendar.js -->
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- RSVP Modal -->
+  <div class="modal-backdrop-custom" id="eventRsvpModal">
+    <div class="modal-window" style="max-width: 520px;">
+      <button class="modal-close-x" onclick="document.getElementById('eventRsvpModal').classList.remove('open'); document.body.style.overflow='';">&times;</button>
+      
+      <span class="badge-pill badge-terracotta" style="margin-bottom: 0.5rem;"><i class="bi bi-calendar-check"></i> Free Participation</span>
+      <h3 id="rsvpModalEventTitle" style="font-size: 1.4rem; margin-bottom: 0.4rem;">Event Registration</h3>
+      <p id="rsvpModalEventDate" style="font-size: 0.88rem; color: var(--text-muted); margin-bottom: 1.5rem;"></p>
+
+      <form id="rsvpForm">
+        <div class="form-group">
+          <label class="form-label">Your Name *</label>
+          <input type="text" id="rsvpName" class="form-control" placeholder="e.g. Vignesh" required>
+        </div>
+        <div class="form-group">
+          <label class="form-label">WhatsApp Mobile Number *</label>
+          <input type="tel" id="rsvpPhone" class="form-control" placeholder="e.g. 9500415161" required>
+        </div>
+        <div class="form-group">
+          <label class="form-label">Email Address</label>
+          <input type="email" id="rsvpEmail" class="form-control" placeholder="vignesh@example.com">
+        </div>
+        <button type="submit" class="btn btn-primary" style="width: 100%;">
+          <i class="bi bi-check2-circle"></i> Confirm Free RSVP
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Editorial Sanctuary Footer -->
+  <footer class="editorial-footer">
+    <div class="container">
+      <div class="footer-top-grid">
+        <!-- Col 1: Brand Manifesto -->
+        <div>
+          <div class="footer-logo-card">
+            <img src="assets/images/annai-logo.jpeg" alt="Annai Foundation">
+          </div>
+          <p style="font-size: 0.92rem; line-height: 1.7; color: #C7BCB7; margin-bottom: 1.5rem;">
+            A registered non-profit trust dedicated to 24/7 emergency medical rescue, blood donor lifelines, destitute dignity, and youth tech empowerment across coastal Karaikal and Puducherry.
+          </p>
+          <div class="flex gap-2">
+            <span class="tax-badge" style="background: rgba(255,255,255,0.1); color: #FDE68A; padding: 0.35rem 0.75rem; font-size: 0.78rem; border-radius: var(--radius-xs);">
+              <i class="bi bi-patch-check-fill"></i> Section 80G Verified
+            </span>
+            <span class="tax-badge" style="background: rgba(255,255,255,0.1); color: #B7DFCA; padding: 0.35rem 0.75rem; font-size: 0.78rem; border-radius: var(--radius-xs);">
+              <i class="bi bi-shield-check"></i> Reg. No. 12612/23
+            </span>
+          </div>
+        </div>
+
+        <!-- Col 2: Quick Links -->
+        <div>
+          <h4 class="footer-heading">Navigation</h4>
+          <ul class="footer-nav-list">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="programs.html">Causes & Programs</a></li>
+            <li><a href="impact.html">Impact & Stories</a></li>
+            <li><a href="events.html">Camps & Events</a></li>
+            <li><a href="volunteer.html">Volunteer Sign Up</a></li>
+            <li><a href="donate.html">Donate / 80G Tax Exemption</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 3: Core Programs -->
+        <div>
+          <h4 class="footer-heading">Key Initiatives</h4>
+          <ul class="footer-nav-list">
+            <li><a href="programs.html?cat=Healthcare">24/7 Free Ambulance</a></li>
+            <li><a href="programs.html?cat=Healthcare">Emergency Blood Bank</a></li>
+            <li><a href="programs.html?cat=Humanitarian">Destitute Sacred Rites</a></li>
+            <li><a href="programs.html?cat=Education">Grow with Google Labs</a></li>
+            <li><a href="programs.html?cat=Livelihood">Women Tailoring Units</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 4: Emergency Contacts -->
+        <div>
+          <h4 class="footer-heading">Emergency Hotline</h4>
+          <p style="font-size: 0.9rem; color: #C7BCB7; margin-bottom: 0.6rem;">
+            <i class="bi bi-geo-alt-fill" style="color: var(--primary);"></i> Karaikal, Puducherry 609602, India
+          </p>
+          <p style="font-size: 0.9rem; color: #C7BCB7; margin-bottom: 0.6rem;">
+            <i class="bi bi-telephone-fill" style="color: var(--accent-gold);"></i> <strong>24/7 Ambulance :</strong> 95004 15161
+          </p>
+          <p style="font-size: 0.9rem; color: #C7BCB7; margin-bottom: 1.25rem;">
+            <i class="bi bi-envelope-fill" style="color: #10B981;"></i> contact@annaifoundation.com
+          </p>
+          <a href="javascript:void(0)" class="btn btn-outline-white btn-sm" data-action="demo-whatsapp" style="width: 100%;">
+            <i class="bi bi-whatsapp"></i> WhatsApp Helpline
+          </a>
+        </div>
+      </div>
+
+      <div class="footer-bottom-bar">
+        <div>&copy; 2026 Annai Foundation. Registered NGO under Indian Trusts Act. All rights reserved.</div>
+        <div class="flex gap-3">
+          <a href="contact.html" style="color: #9E918C;">Privacy Policy</a>
+          <a href="contact.html" style="color: #9E918C;">Terms of Service</a>
+          <a href="donate.html" style="color: #9E918C;">80G Exemption</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating Quick Action Dock -->
+  <aside class="floating-dock-pill" aria-label="Quick Actions">
+    <a href="donate.html" class="dock-pill-btn dock-pill-donate"><i class="bi bi-heart-fill"></i> <span>Give</span></a>
+    <a href="javascript:void(0)" class="dock-pill-btn dock-pill-emergency" data-action="demo-call"><i class="bi bi-telephone-outbound-fill"></i> <span>24/7 SOS</span></a>
+    <a href="javascript:void(0)" class="dock-pill-btn dock-pill-whatsapp" data-action="demo-whatsapp"><i class="bi bi-whatsapp"></i> <span>WhatsApp</span></a>
+  </aside>
+
+  <!-- JavaScript Modules -->
+  <script src="assets/js/data.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/calendar.js"></script>
+</body>
+</html>

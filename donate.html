@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Donate & Save Lives - Annai Foundation (80G Tax Exempt)</title>
+  <meta name="description" content="Support Annai Foundation's emergency ambulance, destitute care, and youth education. 100% tax-exempt under Section 80G with instant downloadable receipts.">
+  
+  <link rel="icon" href="assets/images/logo-preloader.jpeg" type="image/jpeg">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/animations.css">
+  <style>
+    .pay-mode-btn {
+      flex: 1;
+      padding: 0.75rem 0.5rem;
+      border: 1.5px solid var(--border-subtle);
+      background: var(--bg-canvas);
+      font-family: var(--font-display);
+      font-weight: 700;
+      font-size: 0.88rem;
+      color: var(--text-heading);
+      border-radius: var(--radius-sm);
+      cursor: pointer;
+      transition: all var(--transition-fast);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.4rem;
+    }
+    .pay-mode-btn.active {
+      background: var(--primary);
+      color: #FFFFFF;
+      border-color: var(--primary);
+    }
+    .receipt-container {
+      border: 2px dashed var(--border-subtle);
+      padding: 2rem;
+      border-radius: var(--radius-lg);
+      background: #FFFFFF;
+      position: relative;
+    }
+    .receipt-watermark {
+      position: absolute;
+      right: 1.5rem;
+      bottom: 1.5rem;
+      opacity: 0.08;
+      font-size: 6rem;
+      pointer-events: none;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Floating Island Navigation Bar -->
+  <div class="island-nav-wrapper">
+    <nav class="island-navbar" id="mainIslandNav">
+      <a href="index.html" class="brand-island">
+        <img src="assets/images/annai-logo.jpeg" alt="Annai Foundation - Karaikal">
+      </a>
+
+      <ul class="nav-links-island">
+        <li><a href="index.html" class="nav-link-item">Home</a></li>
+        <li><a href="programs.html" class="nav-link-item">Causes & Programs</a></li>
+        <li><a href="impact.html" class="nav-link-item">Impact & Stories</a></li>
+        <li><a href="events.html" class="nav-link-item">Camps & Events</a></li>
+        <li><a href="volunteer.html" class="nav-link-item">Volunteer</a></li>
+        <li><a href="contact.html" class="nav-link-item">Contact & SOS</a></li>
+      </ul>
+
+      <div class="nav-actions-island">
+        <a href="javascript:void(0)" class="sos-pill-btn" data-action="demo-call">
+          <i class="bi bi-telephone-fill"></i> <span>SOS: 95004 15161</span>
+        </a>
+        <a href="donate.html" class="btn-island-donate">
+          <i class="bi bi-heart-fill"></i> Give Hope
+        </a>
+        <button class="mobile-nav-toggle" id="mobileNavToggle" aria-label="Open Navigation">
+          <i class="bi bi-list"></i>
+        </button>
+      </div>
+    </nav>
+  </div>
+
+  <!-- Mobile Drawer Menu -->
+  <div class="mobile-drawer-backdrop" id="drawerBackdrop"></div>
+  <aside class="mobile-drawer-panel" id="drawerPanel">
+    <div class="drawer-top">
+      <div class="flex items-center gap-2">
+        <img src="assets/images/logo-preloader.jpeg" alt="Annai Foundation" style="width: 38px; height: 38px; border-radius: 8px; object-fit: contain;">
+        <div>
+          <strong style="font-family: var(--font-heading); font-size: 1.15rem; display: block; color: var(--text-heading);">Annai Foundation</strong>
+          <span style="font-size: 0.72rem; color: var(--text-muted);">Karaikal • Reg.no.12612/23</span>
+        </div>
+      </div>
+      <button class="drawer-close-btn" id="drawerCloseBtn" aria-label="Close menu">&times;</button>
+    </div>
+
+    <ul class="drawer-links-list">
+      <li><a href="index.html" class="drawer-link"><i class="bi bi-house-door"></i> Home</a></li>
+      <li><a href="programs.html" class="drawer-link"><i class="bi bi-grid-fill"></i> Causes & Programs</a></li>
+      <li><a href="impact.html" class="drawer-link"><i class="bi bi-graph-up-arrow"></i> Impact & Stories</a></li>
+      <li><a href="events.html" class="drawer-link"><i class="bi bi-calendar-event"></i> Camps & Events</a></li>
+      <li><a href="volunteer.html" class="drawer-link"><i class="bi bi-people-fill"></i> Volunteer With Us</a></li>
+      <li><a href="donate.html" class="drawer-link active"><i class="bi bi-gift-fill"></i> Donate / 80G Tax Exemption</a></li>
+      <li><a href="contact.html" class="drawer-link"><i class="bi bi-telephone-fill"></i> Contact & Emergency SOS</a></li>
+    </ul>
+  </aside>
+
+  <!-- Fundraising Goal Hero -->
+  <section class="section-sm" style="padding-top: 4.5rem; background: var(--bg-dark); color: #FFFFFF;">
+    <div class="container">
+      <div class="grid grid-2" style="align-items: center; gap: 3rem;">
+        <div>
+          <span class="badge-pill" style="background: rgba(244, 162, 97, 0.2); color: var(--accent-gold); border: 1px solid rgba(244,162,97,0.35);">
+            <span class="animate-pulse-heart"><i class="bi bi-heart-fill"></i></span> 2026 Lifeline Campaign
+          </span>
+          <h1 style="color: #FFFFFF; font-size: clamp(2rem, 3.5vw, 3rem); margin-bottom: 0.85rem;">
+            Your Gift Transforms Fragile Lives in Karaikal
+          </h1>
+          <p style="color: #D5CCC8; font-size: 1.05rem; line-height: 1.8;">
+            Every single rupee directly fuels midnight ambulance rescues, provides warm meals for abandoned elders, and sponsors rural student study kits.
+          </p>
+        </div>
+
+        <div style="background: rgba(255, 255, 255, 0.06); border: 1px solid rgba(255, 255, 255, 0.15); border-radius: var(--radius-xl); padding: 2.25rem;">
+          <div class="flex-between items-center" style="margin-bottom: 0.5rem;">
+            <span style="font-family: var(--font-display); font-size: 0.95rem; color: #E6DFDC;">Annual Campaign Progress</span>
+            <span style="font-family: var(--font-display); font-size: 1.25rem; font-weight: 800; color: var(--accent-gold);">71.5% Reached</span>
+          </div>
+          <div class="progress-track" style="height: 12px; background: rgba(255, 255, 255, 0.15); margin-bottom: 1.25rem;">
+            <div class="progress-fill" style="width: 71.5%;"></div>
+          </div>
+          <div class="grid grid-3 text-center" style="gap: 1rem; border-top: 1px solid rgba(255, 255, 255, 0.1); padding-top: 1rem;">
+            <div>
+              <span style="display: block; font-family: var(--font-display); font-size: 1.4rem; font-weight: 800; color: var(--accent-gold);">₹35.75 L</span>
+              <span style="font-size: 0.75rem; color: #C7BCB7;">Raised So Far</span>
+            </div>
+            <div>
+              <span style="display: block; font-family: var(--font-display); font-size: 1.4rem; font-weight: 800; color: #FFFFFF;">₹50.00 L</span>
+              <span style="font-size: 0.75rem; color: #C7BCB7;">Annual Target</span>
+            </div>
+            <div>
+              <span style="display: block; font-family: var(--font-display); font-size: 1.4rem; font-weight: 800; color: #10B981;">4,280+</span>
+              <span style="font-size: 0.75rem; color: #C7BCB7;">Active Donors</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Modern Giving Studio -->
+  <section class="section">
+    <div class="container" style="max-width: 860px;">
+      <div class="bento-card" style="padding: 2.75rem;">
+        
+        <!-- Frequency Toggle -->
+        <div class="flex-between items-center flex-wrap gap-2" style="margin-bottom: 2rem; border-bottom: 1px solid var(--border-subtle); padding-bottom: 1.5rem;">
+          <div>
+            <h2 style="font-size: 1.6rem; margin-bottom: 0.2rem;">Make a Secure Contribution</h2>
+            <span style="font-size: 0.85rem; color: var(--text-muted);">100% Tax Deductible under Section 80G</span>
+          </div>
+          
+          <div class="flex gap-1" style="background: var(--bg-subtle); padding: 0.35rem; border-radius: var(--radius-full);">
+            <button type="button" class="btn btn-sm btn-primary" id="freqOneTime" style="border-radius: var(--radius-full);">One-Time</button>
+            <button type="button" class="btn btn-sm btn-outline" id="freqMonthly" style="border-radius: var(--radius-full); border: none;">Monthly</button>
+          </div>
+        </div>
+
+        <form id="mainDonationForm">
+          <!-- Step 1: Select Amount -->
+          <div style="margin-bottom: 2rem;">
+            <label class="form-label" style="font-size: 1rem; margin-bottom: 0.75rem;">1. Select Contribution Amount (₹ INR):</label>
+            <div class="giving-chips-grid" style="grid-template-columns: repeat(5, 1fr); margin-bottom: 1rem;">
+              <button type="button" class="chip-btn" data-amt="500">₹500</button>
+              <button type="button" class="chip-btn" data-amt="1000">₹1,000</button>
+              <button type="button" class="chip-btn active" data-amt="2500">₹2,500</button>
+              <button type="button" class="chip-btn" data-amt="5000">₹5,000</button>
+              <button type="button" class="chip-btn" data-amt="10000">₹10,000</button>
+            </div>
+            <input type="number" id="customAmountInput" class="custom-chip-input" placeholder="Or enter your custom amount (e.g. 15000)">
+          </div>
+
+          <!-- Step 2: Select Cause Allocation -->
+          <div style="margin-bottom: 2rem;">
+            <label class="form-label" style="font-size: 1rem; margin-bottom: 0.5rem;">2. Direct Your Impact Towards:</label>
+            <select id="donationCauseSelect" class="form-control" style="font-weight: 600;">
+              <option value="General">Where Most Needed (General Lifeline Fund)</option>
+              <option value="Ambulance">24/7 Free Ambulance Fuel & Emergency Oxygen</option>
+              <option value="Blood">Emergency Blood & Platelet Donor Network</option>
+              <option value="Destitute">Destitute Elders Meals & Sacred Final Rites</option>
+              <option value="GoogleSkills">Grow with Google Youth Digital Skill Labs</option>
+              <option value="ChildEducation">Underprivileged Children School Supply Kits</option>
+              <option value="WomenTailoring">Women Vocational Sewing Machine Units</option>
+            </select>
+          </div>
+
+          <!-- Real-Time 80G Tax Benefit Summary Box -->
+          <div style="background: var(--bg-subtle); border: 1.5px solid var(--border-subtle); border-radius: var(--radius-md); padding: 1.25rem; margin-bottom: 2rem;">
+            <div class="flex-between items-center" style="margin-bottom: 0.5rem;">
+              <span style="font-family: var(--font-display); font-weight: 700; color: var(--text-heading); font-size: 0.92rem;">
+                <i class="bi bi-patch-check-fill" style="color: var(--secondary);"></i> Section 80G Tax Exemption Benefit:
+              </span>
+              <strong id="taxBenefitAmount" style="font-family: var(--font-display); font-size: 1.2rem; color: var(--secondary);">₹1,250 Saved</strong>
+            </div>
+            <p style="font-size: 0.82rem; color: var(--text-muted); margin-bottom: 0;">
+              50% of your total donation amount is eligible for direct tax deduction from your taxable income under Section 80G (Reg. No. 12612/23).
+            </p>
+          </div>
+
+          <!-- Step 3: Donor Details -->
+          <div style="margin-bottom: 2.5rem;">
+            <h3 style="font-size: 1.2rem; margin-bottom: 1rem;">3. Donor Details for 80G Tax Receipt</h3>
+            <div class="grid grid-2" style="gap: 1rem;">
+              <div class="form-group">
+                <label class="form-label" for="donorName">Full Name *</label>
+                <input type="text" id="donorName" class="form-control" placeholder="e.g. Anand Kumar" required>
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="donorMobile">Mobile / WhatsApp Number *</label>
+                <input type="tel" id="donorMobile" class="form-control" placeholder="e.g. 9876543210" required>
+              </div>
+            </div>
+
+            <div class="grid grid-2" style="gap: 1rem;">
+              <div class="form-group">
+                <label class="form-label" for="donorEmail">Email Address (For Tax Receipt) *</label>
+                <input type="email" id="donorEmail" class="form-control" placeholder="anand@example.com" required>
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="donorPan">PAN Number (Required for 80G)</label>
+                <input type="text" id="donorPan" class="form-control" placeholder="e.g. ABCDE1234F" maxlength="10" style="text-transform: uppercase;">
+              </div>
+            </div>
+          </div>
+
+          <button type="submit" class="btn btn-primary btn-lg" style="width: 100%; font-size: 1.15rem;">
+            <i class="bi bi-lock-fill"></i> Proceed to Secure Payment
+          </button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Checkout Modal (UPI QR / Card / NetBanking) -->
+  <div class="modal-backdrop-custom" id="checkoutModal">
+    <div class="modal-window">
+      <button class="modal-close-x" onclick="document.getElementById('checkoutModal').classList.remove('open'); document.body.style.overflow='';">&times;</button>
+      
+      <div style="text-align: center; margin-bottom: 1.5rem;">
+        <span class="badge-pill badge-evergreen" style="margin-bottom: 0.5rem;"><i class="bi bi-shield-lock-fill"></i> 256-Bit SSL Encrypted</span>
+        <h3 style="font-size: 1.5rem; margin-bottom: 0.25rem;">Complete Your Donation</h3>
+        <div style="font-family: var(--font-heading); font-size: 2.2rem; font-weight: 800; color: var(--primary);" id="modalPayAmountDisplay">₹2,500</div>
+      </div>
+
+      <div class="flex gap-1" style="margin-bottom: 1.5rem;">
+        <button type="button" class="pay-mode-btn active" data-tab="upi"><i class="bi bi-qr-code"></i> UPI QR</button>
+        <button type="button" class="pay-mode-btn" data-tab="card"><i class="bi bi-credit-card"></i> Card</button>
+        <button type="button" class="pay-mode-btn" data-tab="net"><i class="bi bi-bank"></i> NetBanking</button>
+      </div>
+
+      <!-- UPI Panel -->
+      <div id="panelUpi" style="text-align: center; background: var(--bg-subtle); padding: 1.5rem; border-radius: var(--radius-md); margin-bottom: 1.5rem;">
+        <p style="font-size: 0.85rem; font-weight: 700; margin-bottom: 0.75rem;">Scan Official QR using GPay / PhonePe / Paytm / BHIM:</p>
+        <div style="width: 170px; height: 170px; margin: 0 auto; background: #FFFFFF; padding: 6px; border-radius: var(--radius-sm); border: 2px solid var(--border-subtle); display: flex; align-items: center; justify-content: center; position: relative;">
+          <img src="assets/images/original/qr.jpeg" alt="Official Annai Foundation UPI QR Code" style="width: 100%; height: 100%; object-fit: contain; border-radius: 4px;">
+        </div>
+        <div style="margin-top: 0.75rem; font-family: var(--font-display); font-size: 0.88rem;">
+          <strong>UPI ID:</strong> <span style="color: var(--primary);">annaifoundation@sbi</span>
+        </div>
+      </div>
+
+      <!-- Card Panel -->
+      <div id="panelCard" style="display: none; margin-bottom: 1.5rem;">
+        <div class="form-group">
+          <label class="form-label">Card Number</label>
+          <input type="text" class="form-control" value="4111 •••• •••• 1111" readonly>
+        </div>
+        <div class="grid grid-2" style="gap: 0.75rem;">
+          <div class="form-group">
+            <label class="form-label">Expiry</label>
+            <input type="text" class="form-control" value="12/28" readonly>
+          </div>
+          <div class="form-group">
+            <label class="form-label">CVV</label>
+            <input type="password" class="form-control" value="888" readonly>
+          </div>
+        </div>
+      </div>
+
+      <!-- NetBanking Panel -->
+      <div id="panelNet" style="display: none; margin-bottom: 1.5rem;">
+        <div class="form-group">
+          <label class="form-label">Select Bank</label>
+          <select class="form-control">
+            <option>State Bank of India</option>
+            <option>HDFC Bank</option>
+            <option>ICICI Bank</option>
+            <option>Indian Bank</option>
+          </select>
+        </div>
+      </div>
+
+      <button id="btnConfirmDonation" class="btn btn-primary" style="width: 100%; font-size: 1.05rem;">
+        <i class="bi bi-check2-circle"></i> Confirm & Generate 80G Receipt
+      </button>
+    </div>
+  </div>
+
+  <!-- Official Printable 80G Tax Receipt Modal -->
+  <div class="modal-backdrop-custom" id="receiptModal">
+    <div class="modal-window" style="max-width: 640px;">
+      <button class="modal-close-x" onclick="document.getElementById('receiptModal').classList.remove('open'); document.body.style.overflow='';">&times;</button>
+      
+      <div class="receipt-container">
+        <i class="bi bi-patch-check-fill receipt-watermark"></i>
+        
+        <!-- Header -->
+        <div class="flex-between items-center" style="border-bottom: 2px solid var(--secondary); padding-bottom: 1rem; margin-bottom: 1.25rem;">
+          <div class="flex items-center gap-2">
+            <img src="assets/images/annai-logo.jpeg" alt="Annai Foundation" style="height: 48px; object-fit: contain;">
+            <div>
+              <span style="font-size: 0.72rem; color: var(--text-muted); display: block;">Reg. No: 12612/23 | NITI Aayog: PY/2021/0289412</span>
+              <span style="font-size: 0.72rem; color: var(--text-muted); display: block;">Karaikal, Puducherry 609602 | Ph: +91 95004 15161</span>
+            </div>
+          </div>
+          <div style="text-align: right;">
+            <span class="badge-pill badge-saffron" style="font-size: 0.72rem; margin-bottom: 0.2rem;">80G TAX RECEIPT</span>
+            <div style="font-size: 0.78rem; font-weight: 700; color: var(--text-heading);" id="receiptTxnId">AF-948102</div>
+            <div style="font-size: 0.75rem; color: var(--text-muted);" id="receiptDate">10 Sep 2026</div>
+          </div>
+        </div>
+
+        <!-- Details -->
+        <div style="font-size: 0.9rem; line-height: 1.8; margin-bottom: 1.25rem;">
+          <div class="flex-between"><span>Donor Name:</span><strong id="receiptDonorName">Anand Kumar</strong></div>
+          <div class="flex-between"><span>Donor PAN:</span><strong id="receiptDonorPan" style="font-family: monospace;">ABCDE1234F</strong></div>
+          <div class="flex-between"><span>Email & Mobile:</span><span id="receiptDonorEmail"></span> | <span id="receiptDonorPhone"></span></div>
+          <div class="flex-between"><span>Contribution Amount:</span><strong id="receiptAmount" style="font-size: 1.2rem; color: var(--primary);">₹2,500</strong></div>
+          <div class="flex-between"><span>Designated Cause:</span><span id="receiptCause">24/7 Emergency Ambulance</span></div>
+        </div>
+
+        <!-- 80G Declaration -->
+        <div style="background: var(--bg-subtle); padding: 0.85rem; border-radius: var(--radius-sm); font-size: 0.78rem; color: var(--text-body); margin-bottom: 1.25rem;">
+          This donation qualifies for <strong>50% deduction under Section 80G</strong> of the Income Tax Act 1961 vide order no. AABTA8912EF20214.
+        </div>
+
+        <!-- Sign -->
+        <div class="flex-between items-center" style="padding-top: 0.75rem;">
+          <div style="font-size: 0.75rem; color: var(--text-muted);">
+            Digitally verified official document • No physical signature required.
+          </div>
+          <div style="text-align: center;">
+            <div style="font-family: var(--font-heading); font-style: italic; font-weight: 700; color: var(--secondary); font-size: 1.1rem;">Authorized Signatory</div>
+            <span style="font-size: 0.72rem; color: var(--text-muted);">Managing Trustee, Annai Foundation</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="flex gap-2" style="margin-top: 1.5rem;">
+        <button id="btnPrintReceipt" class="btn btn-secondary" style="flex: 1;">
+          <i class="bi bi-printer-fill"></i> Print / Download PDF
+        </button>
+        <button class="btn btn-outline" onclick="document.getElementById('receiptModal').classList.remove('open'); document.body.style.overflow='';" style="flex: 1;">
+          Done
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Editorial Sanctuary Footer -->
+  <footer class="editorial-footer">
+    <div class="container">
+      <div class="footer-top-grid">
+        <!-- Col 1: Brand Manifesto -->
+        <div>
+          <div class="footer-logo-card">
+            <img src="assets/images/annai-logo.jpeg" alt="Annai Foundation">
+          </div>
+          <p style="font-size: 0.92rem; line-height: 1.7; color: #C7BCB7; margin-bottom: 1.5rem;">
+            A registered non-profit trust dedicated to 24/7 emergency medical rescue, blood donor lifelines, destitute dignity, and youth tech empowerment across coastal Karaikal and Puducherry.
+          </p>
+          <div class="flex gap-2">
+            <span class="tax-badge" style="background: rgba(255,255,255,0.1); color: #FDE68A; padding: 0.35rem 0.75rem; font-size: 0.78rem; border-radius: var(--radius-xs);">
+              <i class="bi bi-patch-check-fill"></i> Section 80G Verified
+            </span>
+            <span class="tax-badge" style="background: rgba(255,255,255,0.1); color: #B7DFCA; padding: 0.35rem 0.75rem; font-size: 0.78rem; border-radius: var(--radius-xs);">
+              <i class="bi bi-shield-check"></i> Reg. No. 12612/23
+            </span>
+          </div>
+        </div>
+
+        <!-- Col 2: Quick Links -->
+        <div>
+          <h4 class="footer-heading">Navigation</h4>
+          <ul class="footer-nav-list">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="programs.html">Causes & Programs</a></li>
+            <li><a href="impact.html">Impact & Stories</a></li>
+            <li><a href="events.html">Camps & Events</a></li>
+            <li><a href="volunteer.html">Volunteer Sign Up</a></li>
+            <li><a href="donate.html">Donate / 80G Tax Exemption</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 3: Core Programs -->
+        <div>
+          <h4 class="footer-heading">Key Initiatives</h4>
+          <ul class="footer-nav-list">
+            <li><a href="programs.html?cat=Healthcare">24/7 Free Ambulance</a></li>
+            <li><a href="programs.html?cat=Healthcare">Emergency Blood Bank</a></li>
+            <li><a href="programs.html?cat=Humanitarian">Destitute Sacred Rites</a></li>
+            <li><a href="programs.html?cat=Education">Grow with Google Labs</a></li>
+            <li><a href="programs.html?cat=Livelihood">Women Tailoring Units</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 4: Emergency Contacts -->
+        <div>
+          <h4 class="footer-heading">Emergency Hotline</h4>
+          <p style="font-size: 0.9rem; color: #C7BCB7; margin-bottom: 0.6rem;">
+            <i class="bi bi-geo-alt-fill" style="color: var(--primary);"></i> Karaikal, Puducherry 609602, India
+          </p>
+          <p style="font-size: 0.9rem; color: #C7BCB7; margin-bottom: 0.6rem;">
+            <i class="bi bi-telephone-fill" style="color: var(--accent-gold);"></i> <strong>24/7 Ambulance :</strong> 95004 15161
+          </p>
+          <p style="font-size: 0.9rem; color: #C7BCB7; margin-bottom: 1.25rem;">
+            <i class="bi bi-envelope-fill" style="color: #10B981;"></i> contact@annaifoundation.com
+          </p>
+          <a href="javascript:void(0)" class="btn btn-outline-white btn-sm" data-action="demo-whatsapp" style="width: 100%;">
+            <i class="bi bi-whatsapp"></i> WhatsApp Helpline
+          </a>
+        </div>
+      </div>
+
+      <div class="footer-bottom-bar">
+        <div>&copy; 2026 Annai Foundation. Registered NGO under Indian Trusts Act. All rights reserved.</div>
+        <div class="flex gap-3">
+          <a href="contact.html" style="color: #9E918C;">Privacy Policy</a>
+          <a href="contact.html" style="color: #9E918C;">Terms of Service</a>
+          <a href="donate.html" style="color: #9E918C;">80G Exemption</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating Quick Action Dock -->
+  <aside class="floating-dock-pill" aria-label="Quick Actions">
+    <a href="donate.html" class="dock-pill-btn dock-pill-donate"><i class="bi bi-heart-fill"></i> <span>Give</span></a>
+    <a href="javascript:void(0)" class="dock-pill-btn dock-pill-emergency" data-action="demo-call"><i class="bi bi-telephone-outbound-fill"></i> <span>24/7 SOS</span></a>
+    <a href="javascript:void(0)" class="dock-pill-btn dock-pill-whatsapp" data-action="demo-whatsapp"><i class="bi bi-whatsapp"></i> <span>WhatsApp</span></a>
+  </aside>
+
+  <!-- JavaScript Modules -->
+  <script src="assets/js/data.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/donate.js"></script>
+</body>
+</html>
